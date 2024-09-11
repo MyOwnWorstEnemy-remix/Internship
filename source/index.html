@@ -45,7 +45,7 @@
                 <a class="nav-list__link" href="#grant">Как поехать</a>
               </li>
               <li class="nav-list__item">
-                <a class="nav-list__link" href="#">Отзывы</a>
+                <a class="nav-list__link" href="#reviews">Отзывы</a>
               </li>
               <li class="nav-list__item">
                 <a class="nav-list__link nav-list__link--extended" href="#news">Новости</a>
@@ -461,7 +461,92 @@
           </li>
         </ul>
       </section>
-      <div data-test="reviews">reviews</div>
+      <section class="reviews" id="reviews" data-test="reviews">
+        <h2 class="reviews__title title">Отзывы</h2>
+        <div class="reviews__slider reviews-slider swiper-container">
+          <ul class="reviews-slider__wrapper swiper-wrapper">
+            <li class="reviews-slider__slide review swiper-slide">
+              <div class="review__author-info">
+                <div class="review__author-avatar">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/avatar-1@1x.webp 1x, img/avatar-1@2x.webp 2x" width="90"
+                      height="90">
+                    <img src="img/avatar-1@1x.png" srcset="img/avatar-1@2x.png 2x" width="90"
+                      height="90" alt="Фотография автора отзыва." loading="lazy">
+                  </picture>
+                </div>
+                <div class="review__author-name">
+                  <p>Лола</p>
+                  <p>Алекс</p>
+                </div>
+              </div>
+              <ul class="review__details">
+                <li class="review__details-group">
+                  <p class="tour-slide__details-title">Программа</p>
+                  <p class="tour-slide__details-text">Masa Art Challenge</p>
+                </li>
+                <li class="review__details-group">
+                  <p class="tour-slide__details-title">Дата</p>
+                  <p class="tour-slide__details-text">Осень 2022</p>
+                </li>
+              </ul>
+              <p class="review__title">Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!</p>
+              <div class="review__text">
+                <p>
+                  Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления.
+                  Сочетание путешествий, общения и значимой работы действительно отличает её от других программ,
+                  и я чувствую огромную благодарность за предоставленную мне возможность.
+                </p>
+              </div>
+            </li>
+            <li class="reviews-slider__slide review swiper-slide">
+              <div class="review__author-info">
+                <div class="review__author-avatar">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="img/avatar-2@1x.webp 1x, img/avatar-2@2x.webp 2x" width="90"
+                      height="90">
+                    <img src="img/avatar-2@1x.png" srcset="img/avatar-2@2x.png 2x" width="90"
+                      height="90" alt="Фотография автора отзыва." loading="lazy">
+                  </picture>
+                </div>
+                <div class="review__author-name">
+                  <p>Давид</p>
+                  <p>Иванов</p>
+                </div>
+              </div>
+              <ul class="review__details">
+                <li class="review__details-group">
+                  <p class="tour-slide__details-title">Программа</p>
+                  <p class="tour-slide__details-text">Volunteer Chance</p>
+                </li>
+                <li class="review__details-group">
+                  <p class="tour-slide__details-title">Дата</p>
+                  <p class="tour-slide__details-text">Лето 2022</p>
+                </li>
+              </ul>
+              <p class="review__title">Благодаря опыту стажировки я узнал так много нового о себе и об окружающем мире.</p>
+              <div class="review__text">
+                <p>
+                  Каждый день был возможностью оказать ощутимое влияние на жизнь других людей.
+                  Я бы очень рекомендовал эту волонтёрскую программу всем, кто ищет значимый и незабываемый опыт.
+                  Организация была на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-pagination reviews__pagination"></div>
+          <div class="reviews__button-wrapper">
+            <button class="reviews__button reviews__button--prev visually-hidden slider-button slider-button--prev" type="button">
+              <span class="visually-hidden">Предыдущий слайд</span>
+            </button>
+            <button class="reviews__button reviews__button--next visually-hidden slider-button slider-button--next" type="button">
+              <span class="visually-hidden">Следующий слайд</span>
+            </button>
+          </div>
+      </section>
       <div data-test="contacts">contacts</div>
       <div data-test="form">form</div>
     </main>
