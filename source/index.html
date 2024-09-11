@@ -22,10 +22,10 @@
           <div class="main-nav__wrapper">
             <ul class="main-nav__list nav-list">
               <li class="nav-list__item">
-                <a class="nav-list__link" href="#">О проекте</a>
+                <a class="nav-list__link" href="#about">О проекте</a>
               </li>
               <li class="nav-list__item">
-                <a class="nav-list__link nav-list__link--extended" href="#">Программы</a>
+                <a class="nav-list__link nav-list__link--extended" href="#programs">Программы</a>
                 <ul class="nav-list__sub-list">
                   <li class="nav-list__sub-item">
                     <a class="nav-list__link" href="#">Стажировки</a>
@@ -42,7 +42,7 @@
                 </ul>
               </li>
               <li class="nav-list__item">
-                <a class="nav-list__link" href="#">Как поехать</a>
+                <a class="nav-list__link" href="#grant">Как поехать</a>
               </li>
               <li class="nav-list__item">
                 <a class="nav-list__link" href="#">Отзывы</a>
@@ -51,16 +51,19 @@
                 <a class="nav-list__link nav-list__link--extended" href="#">Новости</a>
                 <ul class="nav-list__sub-list">
                   <li class="nav-list__sub-item">
-                    <a class="nav-list__link" href="#">Стажировки</a>
+                    <a class="nav-list__link" href="#">Общее</a>
                   </li>
                   <li class="nav-list__sub-item">
                     <a class="nav-list__link" href="#">Волонтёрство</a>
                   </li>
                   <li class="nav-list__sub-item">
-                    <a class="nav-list__link" href="#">Учёба</a>
+                    <a class="nav-list__link" href="#">Стажировки</a>
                   </li>
                   <li class="nav-list__sub-item">
-                    <a class="nav-list__link" href="#">Религия</a>
+                    <a class="nav-list__link" href="#">Карьера</a>
+                  </li>
+                  <li class="nav-list__sub-item">
+                    <a class="nav-list__link" href="#">Путешествия</a>
                   </li>
                 </ul>
               </li>
@@ -165,7 +168,7 @@
       </section>
     </header>
     <main>
-      <section class="about" data-test="about">
+      <section class="about" id="about" data-test="about">
         <div class="about__wrapper">
           <div class="about__container">
             <h2 class="about__title title">О проекте «Стажировка»</h2>
@@ -201,7 +204,7 @@
           </ul>
         </div>
       </section>
-      <section class="programs" data-test="programs">
+      <section class="programs" id="programs" data-test="programs">
         <div class="programs__wrapper">
           <h2 class="programs__title title">Программы</h2>
           <div class="programs__slider programs-slider swiper-container">
@@ -292,7 +295,43 @@
           <a class="programs__button button" href="#">Все программы</a>
         </div>
       </section>
-      <div data-test="grant">grant</div>
+      <section class="grant" id="grant" data-test="grant">
+        <div class="grant__wrapper">
+          <div class="grant__description">
+            <h2 class="grant__title title">Как поехать</h2>
+            <p>
+              Свяжитесь с координатором, чтобы узнать полную информацию. Вы получите актуальные сведения
+              о доступных программах и городах, в которых можете пройти программу.
+            </p>
+            <div class="grant__image">
+              <picture>
+                <source type="image/webp"
+                  srcset="img/grant@1x.webp 1x, img/grant@2x.webp 2x" width="678"
+                  height="375">
+                <img src="img/grant@1x.png" srcset="img/grant@2x.png 2x" width="678"
+                  height="375" alt="Указатели в направлении разных стран." loading="lazy">
+              </picture>
+            </div>
+          </div>
+          <div class="grant__requirements">
+            <h3 class="grant__subtitle">Чтобы получить грант на обучение, вам нужно:</h3>
+            <ol class="requirements">
+              <li class="requirements__item">
+                <p class="requirements__text">Быть в возрасте от 16 до 30 лет</p>
+              </li>
+              <li class="requirements__item">
+                <p class="requirements__text">Иметь оконченное среднее образование</p>
+              </li>
+              <li class="requirements__item">
+                <p class="requirements__text">Иметь документально подтверждённое отсутствие судимости и пройти консульскую проверку</p>
+              </li>
+              <li class="requirements__item">
+                <p class="requirements__text">За последние 2 года быть не больше 3х месяцев подряд непрерывно в одной стране</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
       <div data-test="news">news</div>
       <div data-test="FAQ">FAQ</div>
       <div data-test="reviews">reviews</div>
