@@ -48,7 +48,7 @@
                 <a class="nav-list__link" href="#">Отзывы</a>
               </li>
               <li class="nav-list__item">
-                <a class="nav-list__link nav-list__link--extended" href="#">Новости</a>
+                <a class="nav-list__link nav-list__link--extended" href="#news">Новости</a>
                 <ul class="nav-list__sub-list">
                   <li class="nav-list__sub-item">
                     <a class="nav-list__link" href="#">Общее</a>
@@ -332,7 +332,63 @@
           </div>
         </div>
       </section>
-      <div data-test="news">news</div>
+      <section class="news" id="news" data-test="news">
+        <h2 class="news__title title">Новости и материалы</h2>
+        <ul class="news__tabs-list">
+          <li class="news__tabs-item">
+            <button class="news__tab" type="button">Общее</button>
+          </li>
+          <li class="news__tabs-item">
+            <button class="news__tab" type="button">Волонтёрство</button>
+          </li>
+          <li class="news__tabs-item">
+            <button class="news__tab" type="button">Стажировки</button>
+          </li>
+          <li class="news__tabs-item">
+            <button class="news__tab" type="button">Карьера</button>
+          </li>
+          <li class="news__tabs-item">
+            <button class="news__tab" type="button">Путешествия</button>
+          </li>
+        </ul>
+        <div class="news__slider news-slider swiper-container">
+          <ul class="news-slider__wrapper swiper-wrapper">
+            <li class="news-slider__slide swiper-slide">
+              <div class="news-slider__image">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/news-desktop-1@1x.webp 1x, img/news-desktop-1@2x.webp 2x" width="604" height="400">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/news-tablet-1@1x.webp 1x, img/news-tablet-1@2x.webp 2x" width="324" height="350">
+                  <source type="image/webp"
+                    srcset="img/news-mobile-1@1x.webp 1x, img/news-mobile-1@2x.webp 2x" width="290" height="330">
+                  <source type="image/png" media="(min-width: 1440px)"
+                    srcset="img/news-desktop-1@1x.png 1x, img/news-desktop-1@2x.png 2x" width="604" height="400">
+                  <source type="image/png" media="(min-width: 768px)"
+                    srcset="img/news-tablet-1@1x.png 1x, img/news-tablet-1@2x.png 2x" width="324" height="350">
+                  <img src="img/news-mobile-1@1x.png" srcset="img/news-mobile-1@2x.png 2x" width="290"
+                    height="330" alt="Фотография участницы программы стажировки." loading="lazy">
+                </picture>
+              </div>
+              <span class="news-slider__date">23/03/2023</span>
+              <h3 class="news-slider__title">Интервью с участницей программы стажировки</h3>
+              <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+              <a class="news-slider__link" href="#">
+                <span class="visually-hidden">Подробнее</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="news__navigation-wrapper">
+          <button class="news__button news__button--prev visually-hidden slider-button slider-button--prev" type="button">
+            <span class="visually-hidden">Предыдущий слайд</span>
+          </button>
+          <ul class="news__navigation"></ul>
+          <button class="news__button news__button--next visually-hidden slider-button slider-button--next" type="button">
+            <span class="visually-hidden">Следующий слайд</span>
+          </button>
+        </div>
+      </section>
       <div data-test="FAQ">FAQ</div>
       <div data-test="reviews">reviews</div>
       <div data-test="contacts">contacts</div>
@@ -340,6 +396,34 @@
     </main>
     <footer data-test="footer">footer</footer>
     <script type="module" src="js/main.js"></script>
+
+    <!-- Шаблон слайда новостей -->
+    <template id="news-slide-template">
+      <li class="news-slider__slide swiper-slide">
+        <div class="news-slider__image">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="img/news-desktop-1@1x.webp 1x, img/news-desktop-1@2x.webp 2x" width="604" height="400">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/news-tablet-1@1x.webp 1x, img/news-tablet-1@2x.webp 2x" width="324" height="350">
+            <source type="image/webp"
+              srcset="img/news-mobile-1@1x.webp 1x, img/news-mobile-1@2x.webp 2x" width="290" height="330">
+            <source type="image/png" media="(min-width: 1440px)"
+              srcset="img/news-desktop-1@1x.png 1x, img/news-desktop-1@2x.png 2x" width="604" height="400">
+            <source type="image/png" media="(min-width: 768px)"
+              srcset="img/news-tablet-1@1x.png 1x, img/news-tablet-1@2x.png 2x" width="324" height="350">
+            <img src="img/news-mobile-1@1x.png" srcset="img/news-mobile-1@2x.png 2x" width="290"
+              height="330" alt="Фотография участницы программы стажировки." loading="lazy">
+          </picture>
+        </div>
+        <span class="news-slider__date"></span>
+        <h3 class="news-slider__title"></h3>
+        <p></p>
+        <a class="news-slider__link" href="#">
+          <span class="visually-hidden">Подробнее</span>
+        </a>
+      </li>
+    </template>
   </body>
 
 </html>
