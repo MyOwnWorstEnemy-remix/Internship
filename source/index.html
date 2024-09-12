@@ -17,6 +17,9 @@
     <!-- примеры требуемых атрибутов data-test="*" -->
     <header class="header" data-test="hero">
       <div class="header__wrapper">
+        <svg class="header__logo" width="100" height="20" role="img" aria-label="Фитнес центр SUPERGYM">
+          <use href="/__spritemap#sprite-logo"></use>
+        </svg>
         <nav class="header__nav main-nav main-nav--closed">
           <button class="main-nav__toggle" type="button"><span>Меню</span></button>
           <div class="main-nav__wrapper">
@@ -633,7 +636,50 @@
         </div>
       </section>
     </main>
-    <footer data-test="footer">footer</footer>
+    <footer class="footer" data-test="footer">
+      <svg class="footer__logo" width="100" height="20" role="img" aria-label="Фитнес центр SUPERGYM">
+        <use href="/__spritemap#sprite-logo"></use>
+      </svg>
+      <ul class="footer__navigation">
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#about">О проекте</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#programs">Программы</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#grant">Как поехать</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#reviews">Отзывы</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#news">Новости</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#contacts">Контакты</a>
+        </li>
+      </ul>
+      <a class="footer__link" href="#">Политика конфиденциальности</a>
+      <p class="footer__copyright">Стажировка © 2023 Все права защищены</p>
+      <ul class="footer__social-list social-list">
+        <li class="social-list__item">
+          <a class="social-list__link social-link social-list__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank">
+            <p class="visually-hidden">Мы в Вконтакте.</p>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-link social-list__link--ok" href="https://htmlacademy.ru/" target="_blank">
+            <p class="visually-hidden">Мы в Одноклассниках.</p>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-link social-list__link--reddit" href="https://htmlacademy.ru/" target="_blank">
+            <p class="visually-hidden">Мы в Reddit.</p>
+          </a>
+        </li>
+      </ul>
+    </footer>
     <script type="module" src="js/main.js"></script>
 
     <!-- Шаблон слайда новостей -->
