@@ -68,7 +68,7 @@
                 </ul>
               </li>
               <li class="nav-list__item">
-                <a class="nav-list__link" href="#">Контакты</a>
+                <a class="nav-list__link" href="#contacts">Контакты</a>
               </li>
             </ul>
           </div>
@@ -554,7 +554,48 @@
             </button>
           </div>
       </section>
-      <div data-test="contacts">contacts</div>
+      <section class="contacts" id="contacts" data-test="contacts">
+        <div class="contacts__wrapper">
+          <div class="contacts__text-container">
+            <h2 class="contacts__title title">Контакты</h2>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <h3 class="contacts__name">Центральный офис</h3>
+                <p class="contacts__text">г. Новосибирск, ул. Щетинкина 68, культурный центр</p>
+              </li>
+              <li class="contacts__item">
+                <h3 class="contacts__name">Телефон</h3>
+                <a class="contacts__link" href="tel:7(963)876-876-76">+7 963 876 876 76</a>
+              </li>
+              <li class="contacts__item">
+                <h3 class="contacts__name">Email</h3>
+                <a class="contacts__link" href="mailto:Info@stazh.ru">Info@stazh.ru</a>
+              </li>
+            </ul>
+          </div>
+          <div class="contacts__image">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)"
+                srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x" width="1240"
+                height="487">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x" width="678"
+                height="500">
+              <source type="image/webp"
+                srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x" width="290"
+                height="240">
+              <source type="image/png" media="(min-width: 1440px)"
+                srcset="img/map-desktop@1x.png 1x, img/map-desktop@2x.png 2x" width="1240"
+                height="487">
+              <source type="image/png" media="(min-width: 768px)"
+                srcset="img/map-tablet@1x.png 1x, img/map-tablet@2x.png 2x" width="678"
+                height="500">
+              <img src="img/map-mobile@1x.png" srcset="img/map-mobile@2x.png 2x" width="290"
+                height="240" alt="Местоположение офиса на карте." loading="lazy">
+            </picture>
+          </div>
+        </div>
+      </section>
       <div data-test="form">form</div>
     </main>
     <footer data-test="footer">footer</footer>
