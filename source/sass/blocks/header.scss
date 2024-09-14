@@ -1,38 +1,28 @@
 .header {
   position: relative;
-  width: $mobile-actual-width;
-  padding: 20px $mobile-padding 4px;
+  width: 100vw;
   margin: 0 auto;
-
-  @media (min-width: $tablet-width) {
-    width: $tablet-actual-width;
-    padding: 30px $tablet-padding 4px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: $desktop-actual-width;
-    padding: 30px $desktop-padding 4px;
-  }
+  z-index: 2;
 }
 
 .header__wrapper {
   position: absolute;
   top: 0;
   left: 0;
-  width: $mobile-actual-width;
+  width: 100vw;
   padding: 20px $mobile-padding 4px;
+  box-sizing: border-box;
   background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 3;
 
   @media (min-width: $tablet-width) {
-    width: $tablet-actual-width;
     padding: 30px $tablet-padding 4px;
   }
 
   @media (min-width: $desktop-width) {
-    width: $desktop-actual-width;
     padding: 30px $desktop-padding 4px;
   }
 }

@@ -1,0 +1,147 @@
+.button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  background-color: inherit;
+  border-radius: 30px;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 5px 50px 5px 21px;
+  color: $text-color-additional;
+  border: 1px solid $button-color-primary;
+  cursor: pointer;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -17px;
+    right: 5px;
+    background-color: $button-color-primary;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    margin-top: -5px;
+    right: 17px;
+    mask-repeat: no-repeat;
+    mask-image: url("/__spritemap#sprite-arrow-view");
+    background-color: $icon-color-light;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+    min-height: 56px;
+    letter-spacing: 0.28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 58px;
+  }
+
+  &:hover {
+    background-color: $button-color-primary;
+    color: $text-color-secondary;
+
+    &::before {
+      background-color: $button-color-light;
+    }
+
+    &::after {
+      background-color: $icon-color-primary;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:focus {
+    &::after {
+      transform: rotate(45deg);
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+    background-color: $button-color-primary;
+    color: $text-color-secondary;
+
+    &::before {
+      background-color: $button-color-light;
+    }
+
+    &::after {
+      background-color: $icon-color-primary;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:disabled {
+    opacity: 1;
+    background-color: inherit;
+    color: $disabled-color;
+
+    &::before {
+      background-color: $disabled-color;
+    }
+
+    &::after {
+      background-color: $icon-color-light;
+      transform: none;
+    }
+  }
+
+  &--light {
+    color: $text-color-secondary;
+    border: 1px solid $button-color-light;
+
+    &::before {
+      background-color: $button-color-light;
+    }
+
+    &::after {
+      background-color: $icon-color-primary;
+    }
+
+    &:hover {
+      background-color: $button-color-light;
+      color: $text-color-additional;
+
+      &::before {
+        background-color: $button-color-primary;
+      }
+
+      &::after {
+        background-color: $icon-color-light;
+        transform: rotate(45deg);
+      }
+    }
+
+    &:active {
+      opacity: 0.7;
+      background-color: $button-color-light;
+      color: $text-color-additional;
+
+      &::before {
+        background-color: $button-color-primary;
+      }
+
+      &::after {
+        background-color: $icon-color-light;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
