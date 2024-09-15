@@ -1,0 +1,200 @@
+.modal {
+  display: block;
+  position: absolute;
+  top: 23px;
+  left: 0;
+  width: 100vw;
+  z-index: 2;
+
+  &--closed {
+    display: none;
+  }
+}
+
+.modal__wrapper {
+  width: $mobile-actual-width;
+  margin: 0 auto;
+  padding: 36px 15px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-color: $background-color-secondary;
+  position: relative;
+}
+
+.modal__close-button {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    top: 0;
+    right: 0;
+    background-color: $icon-color-primary;
+    mask-image: url("/__spritemap#sprite-cross-view");
+  }
+}
+
+.modal__title {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: center;
+  color: $text-color-additional;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.modal__text {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  width: 220px;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal__input-label {
+  font-size: 14px;
+  line-height: 14px;
+  opacity: 0.8;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.modal__text-input {
+  font-size: 14px;
+  line-height: 14px;
+  width: 100%;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 0 25px;
+  border: 1px solid $form-color-dark;
+  border-radius: 8px;
+  opacity: 0.3;
+
+  &:focus {
+    outline: none;
+    opacity: 1;
+  }
+
+  &:disabled {
+    border: 1px solid rgba(169, 175, 183, 0.5);
+    background-color: rgba(169, 175, 183, 0.2);
+    opacity: 1;
+  }
+}
+
+.modal__input-label:has(~ .modal__text-input:focus) {
+  opacity: 1;
+}
+
+.modal__input-label:has(~ .modal__text-input:disabled) {
+  opacity: 1;
+  color: $disabled-color;
+}
+
+.modal__form-button {
+  justify-content: center;
+  min-height: 42px;
+}
+
+.modal__input:hover .modal__input-label,
+.modal__input:hover .modal__text-input {
+  opacity: 1;
+}
+
+.modal__input--error .modal__input-label {
+  opacity: 1;
+}
+
+.modal__input--error .modal__text-input {
+  background-color: rgba(255, 94, 102, 0.2);
+  border: 1px solid $form-collor-error;
+  opacity: 1;
+}
+
+.modal__checkbox-label {
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: $button-color-primary;
+    border: 1px solid $button-color-primary;
+    border-radius: 2px;
+    top: 50%;
+    margin-top: -9px;
+    left: -30px;
+  }
+
+  &::after {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    mask-image: url("/__spritemap#sprite-check-view");
+    background: $icon-color-light;
+    top: 50%;
+    margin-top: -5px;
+    left: -25px;
+  }
+
+  &:hover {
+    &::before {
+      background-color: transparent;
+    }
+  }
+}
+
+.modal__checkbox:checked + .modal__checkbox-label::after {
+  content: "";
+}
+
+.modal__checkbox:hover:checked + .modal__checkbox-label::after,
+.modal__checkbox:focus:checked + .modal__checkbox-label::after {
+  background-color: $icon-color-primary;
+}
+
+.modal__checkbox:focus + .modal__checkbox-label::before {
+  background-color: transparent;
+}
+
+.modal__checkbox:disabled + .modal__checkbox-label::before {
+  background-color: $disabled-color;
+  border: 1px solid $disabled-color;
+}
+
+.modal__checkbox:disabled:checked + .modal__checkbox-label::after {
+  background-color: $icon-color-light;
+  opacity: 0.7;
+}
+
+.modal__checkbox--error + .modal__checkbox-label::before {
+  background-color: rgba(255, 94, 102, 0.2);
+  border: 1px solid $form-collor-error;
+  opacity: 1;
+}

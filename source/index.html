@@ -650,15 +650,19 @@
               <span class="form__input-label">Ваше сообщение</span>
               <textarea class="form__textarea" name="message" id="message" required></textarea>
             </label>
-            <label class="form__input">
-              <span class="form__input-label">Выберите город</span>
-              <select class="form__select" name="city" id="city">
-                <option value=""></option>
-                <option value="msc">Москва</option>
-                <option value="sbp">Санкт-Петербург</option>
-                <option value="ekb">Екатеринбург</option>
-              </select>
-              <textarea class="form__textarea" name="message" id="message" required></textarea>
+            <label class="form__input select"  data-state="">
+              <span class="select__input-label">Выберите город</span>
+              <div class="select__list">
+                <div class="select__title" data-default="empty" tabindex="0"></div>
+                <div class="select__content">
+                  <input class="select__input visually-hidden" type="radio" name="city" id="msc" value="msc">
+                  <label for="msc" class="select__label">Москва</label>
+                  <input class="select__input visually-hidden" type="radio" name="city" id="sbp" value="sbp">
+                  <label for="sbp" class="select__label">Санкт-Петербург</label>
+                  <input class="select__input visually-hidden" type="radio" name="city" id="ekb" value="ekb">
+                  <label for="ekb" class="select__label">Екатеринбург</label>
+                </div>
+              </div>
             </label>
             <div>
               <input class="form__checkbox visually-hidden" type="checkbox" name="consent" id="consent" required>
@@ -742,6 +746,47 @@
         </a>
       </li>
     </template>
+
+    <!-- Модальное окно -->
+    <div class="modal modal--closed">
+      <div class="modal__wrapper">
+        <button class="modal__close-button" type="button">
+          <span class="visually-hidden">Закрыть.</span>
+        </button>
+        <h2 class="modal__title">Напишите нам</h2>
+        <p class="modal__text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+        <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="modal__input">
+            <span class="modal__input-label">Имя</span>
+            <input class="modal__text-input" type="text" name="name" id="name" required>
+          </label>
+          <label class="modal__input">
+            <span class="modal__input-label">Телефон</span>
+            <input class="modal__text-input" type="tel" name="phone" id="phone" required >
+              <!-- pattern="[^\p{L}]+" title="Телефон не может содержать буквы. Телефон должен начинаться с +7." -->
+          </label>
+          <label class="modal__input select"  data-state="">
+            <span class="select__input-label">Выберите город</span>
+            <div class="select__list">
+              <div class="select__title" data-default="empty" tabindex="0"></div>
+              <div class="select__content">
+                <input class="select__input visually-hidden" type="radio" name="city" id="msc" value="msc">
+                <label for="msc" class="select__label">Москва</label>
+                <input class="select__input visually-hidden" type="radio" name="city" id="sbp" value="sbp">
+                <label for="sbp" class="select__label">Санкт-Петербург</label>
+                <input class="select__input visually-hidden" type="radio" name="city" id="ekb" value="ekb">
+                <label for="ekb" class="select__label">Екатеринбург</label>
+              </div>
+            </div>
+          </label>
+          <div>
+            <input class="modal__checkbox visually-hidden" type="checkbox" name="modal-consent" id="modal-consent" required>
+            <label class="modal__checkbox-label" for="modal-consent">Я согласен на обработку моих персональных данных</label>
+          </div>
+          <button class="modal__form-button button" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
   </body>
 
 </html>

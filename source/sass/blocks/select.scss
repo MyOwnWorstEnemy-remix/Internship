@@ -1,0 +1,120 @@
+.select__input-label {
+  font-size: 14px;
+  line-height: 14px;
+  opacity: 0.8;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.select__list {
+  position: relative;
+}
+
+.select[data-state="active"] {
+  .select__title {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  .select__content {
+    display: flex;
+  }
+
+  .select__title {
+    border: 1px solid $form-color-dark;
+  }
+
+  .select__input-label {
+    opacity: 1;
+  }
+}
+
+.select__title {
+  font-size: 14px;
+  line-height: 14px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  border: 1px solid rgba(72, 72, 72, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    right: 14px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    transition: all 0.3s ease-out;
+    background-color: #333333;
+    mask-image: url("/__spritemap#sprite-arrow-down-view");
+  }
+}
+
+.select:hover .select__title {
+  border: 1px solid $form-color-dark;
+}
+
+.select:hover  .select__input-label {
+  opacity: 1;
+}
+
+.select:has(.select__title:focus-visible) .select__input-label {
+  opacity: 1;
+}
+
+.select:has(.select__title:focus-visible) .select__title {
+  border: 1px solid $form-color-dark;
+  outline: none;
+}
+
+.select__content {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: $background-color-secondary;
+  border: 1px solid $form-color-dark;
+  border-radius: 8px;
+  transition: all 0.3s ease-out;
+  z-index: 5;
+  display: none;
+}
+
+.select__label {
+  font-size: 14px;
+  line-height: 14px;
+  padding: 17px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover {
+    color: $text-color-additional;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+    color: $text-color-secondary;
+    background-color: $background-color-additional;
+  }
+}
+
+.select__label:first-of-type {
+  border-radius: 8px 8px 0 0;
+}
+
+.select__label:last-of-type {
+  border-radius: 0 0 8px 8px;
+}
