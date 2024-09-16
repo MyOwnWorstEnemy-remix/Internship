@@ -4,6 +4,11 @@
   opacity: 0.8;
   display: inline-block;
   margin-bottom: 8px;
+
+  @media (min-width: $tablet-width) {
+    line-height: 20px;
+    margin-bottom: 12px;
+  }
 }
 
 .select__list {
@@ -57,6 +62,12 @@
     background-color: #333333;
     mask-image: url("/__spritemap#sprite-arrow-down-view");
   }
+
+  @media (min-width: $tablet-width) {
+    min-height: 50px;
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .select:hover .select__title {
@@ -91,6 +102,10 @@
   transition: all 0.3s ease-out;
   z-index: 5;
   display: none;
+
+  @media (min-width: $tablet-width) {
+    top: 54px;
+  }
 }
 
 .select__label {
