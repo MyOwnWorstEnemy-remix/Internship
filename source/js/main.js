@@ -1,4 +1,4 @@
 import './menu';
-import './sliders';
+import './hero-slider';
 import './modal';
 import './select';
