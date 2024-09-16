@@ -30,7 +30,7 @@ const setPaginationHeight = () => {
   let bottom = getComputedStyle(text).getPropertyValue('bottom');
   bottom = bottom.substring(0, bottom.length - 2);
   const height = text.offsetHeight + parseInt(bottom);
-  // console.log(heroSlider.activeIndex);
+  // console.log("activeIndex:  " + heroSlider.activeIndex);
   // console.log(text.offsetHeight);
   // console.log(parseInt(bottom));
   heroPagination.style.bottom = `${height}px`;

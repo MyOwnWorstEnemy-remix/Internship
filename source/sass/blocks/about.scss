@@ -1,0 +1,134 @@
+.about {
+  width: $mobile-actual-width;
+  padding: 50px $mobile-padding;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-actual-width;
+    padding: 50px $tablet-padding;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-actual-width;
+    padding: 70px $desktop-padding 60px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 60px;
+  }
+}
+
+.about__title {
+  margin: 0;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.about__container {
+  margin-bottom: 40px;
+
+  @media (min-width: $desktop-width) {
+    width: 702px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 22px;
+      line-height: 32px;
+    }
+  }
+}
+
+.about__description {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    width: 500px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 498px;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    color: $text-color-additional;
+    margin: 0;
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 28px;
+      line-height: 28px;
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 32px;
+      line-height: 36px;
+      margin-bottom: 40px;
+    }
+  }
+
+  div {
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 50px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+    }
+
+    @media (min-width: $desktop-width) {
+      line-height: 26px;
+    }
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.about__button {
+  @media (min-width: $tablet-width) {
+    padding-left: 30px;
+    padding-right: 81px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 56px;
+  }
+}
+
+.about__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
