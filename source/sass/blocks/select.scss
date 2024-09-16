@@ -60,10 +60,11 @@
 }
 
 .select:hover .select__title {
+  background-color: $background-color-secondary;
   border: 1px solid $form-color-dark;
 }
 
-.select:hover  .select__input-label {
+.select:hover .select__input-label {
   opacity: 1;
 }
 
@@ -72,6 +73,7 @@
 }
 
 .select:has(.select__title:focus-visible) .select__title {
+  background-color: $background-color-secondary;
   border: 1px solid $form-color-dark;
   outline: none;
 }
@@ -117,4 +119,14 @@
 
 .select__label:last-of-type {
   border-radius: 0 0 8px 8px;
+}
+
+.select--error .select__input-label {
+  opacity: 1;
+}
+
+.select--error .select__title {
+  background-color: rgba(255, 94, 102, 0.2);
+  border: 1px solid $form-collor-error;
+  opacity: 1;
 }

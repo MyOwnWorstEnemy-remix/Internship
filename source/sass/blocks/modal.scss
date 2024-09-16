@@ -4,11 +4,6 @@
   top: 23px;
   left: 0;
   width: 100vw;
-  z-index: 2;
-
-  &--closed {
-    display: none;
-  }
 }
 
 .modal__wrapper {
@@ -19,28 +14,61 @@
   border-radius: 16px;
   background-color: $background-color-secondary;
   position: relative;
+  z-index: 3;
 }
 
 .modal__close-button {
   position: absolute;
   content: "";
-  width: 16px;
-  height: 16px;
-  top: 20px;
-  right: 20px;
+  width: 36px;
+  height: 36px;
+  top: 10px;
+  right: 10px;
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  &::before {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: $icon-color-primary;
+    top: 0;
+    right: 0;
+  }
 
   &::after {
     position: absolute;
     content: "";
     width: 16px;
     height: 16px;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 10px;
     background-color: $icon-color-primary;
     mask-image: url("/__spritemap#sprite-cross-view");
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      content: "";
+    }
+
+    &::after {
+      background-color: $icon-color-light;
+    }
+  }
+
+  &:active {
+    &::before {
+      content: "";
+      background-color: $active-color;
+    }
+
+    &::after {
+      background-color: $icon-color-light;
+    }
   }
 }
 

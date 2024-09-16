@@ -655,6 +655,8 @@
               <div class="select__list">
                 <div class="select__title" data-default="empty" tabindex="0"></div>
                 <div class="select__content">
+                  <input class="select__input visually-hidden" type="radio" name="city" id="another" value="another">
+                  <label for="another" class="select__label">Другое</label>
                   <input class="select__input visually-hidden" type="radio" name="city" id="msc" value="msc">
                   <label for="msc" class="select__label">Москва</label>
                   <input class="select__input visually-hidden" type="radio" name="city" id="sbp" value="sbp">
@@ -719,6 +721,8 @@
     </footer>
     <script type="module" src="js/main.js"></script>
 
+    <div class="overlay visually-hidden"></div>
+
     <!-- Шаблон слайда новостей -->
     <template id="news-slide-template">
       <li class="news-slider__slide swiper-slide">
@@ -748,7 +752,7 @@
     </template>
 
     <!-- Модальное окно -->
-    <div class="modal modal--closed">
+    <div class="modal visually-hidden">
       <div class="modal__wrapper">
         <button class="modal__close-button" type="button">
           <span class="visually-hidden">Закрыть.</span>
@@ -770,6 +774,8 @@
             <div class="select__list">
               <div class="select__title" data-default="empty" tabindex="0"></div>
               <div class="select__content">
+                <input class="select__input visually-hidden" type="radio" name="city" id="another" value="another">
+                <label for="another" class="select__label">Другое</label>
                 <input class="select__input visually-hidden" type="radio" name="city" id="msc" value="msc">
                 <label for="msc" class="select__label">Москва</label>
                 <input class="select__input visually-hidden" type="radio" name="city" id="sbp" value="sbp">
