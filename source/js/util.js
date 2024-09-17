@@ -1,3 +1,6 @@
+const nameRules = /[a-zA-Zа-яёА-ЯЁ ]+/;
+const phoneRules = /[+][7][^\p{L}]+/gu;
+
 // Открыть выпадающий список
 const openSelestList = (select, selectLabels) => {
   select.setAttribute('data-state', 'active');
@@ -15,15 +18,15 @@ const closeSelectList = (select, selectLabels) => {
 };
 
 // Проверить текстовый ввод
-const checkInput = (rules, input, errorText) => {
+const checkInput = (rules, input) => {
   const inputValue = input.value.trim();
   const checkedInput = inputValue.match(rules);
   if (!checkedInput || checkedInput[0] !== inputValue) {
-    input.parentElement.classList.add(errorText);
+    input.parentElement.classList.add('text-input--error');
     return false;
   }
 
-  input.parentElement.classList.remove(errorText);
+  input.parentElement.classList.remove('text-input--error');
   return true;
 };
 
@@ -36,13 +39,13 @@ const checkSelect = (select) => {
   return false;
 };
 
-const checkCheckbox = (checkbox, errorText) => {
+const checkCheckbox = (checkbox) => {
   if(checkbox.checked) {
     return true;
   }
 
-  checkbox.classList.add(errorText);
+  checkbox.classList.add('checkbox__input--error');
   return false;
 };
 
-export {openSelestList, closeSelectList, checkInput, checkSelect, checkCheckbox};
+export {nameRules, phoneRules, openSelestList, closeSelectList, checkInput, checkSelect, checkCheckbox};

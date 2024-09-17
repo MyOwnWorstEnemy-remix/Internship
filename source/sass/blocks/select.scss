@@ -1,14 +1,21 @@
 .select__input-label {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 14px;
+  color: $text-color-additional-light;
   opacity: 0.8;
   display: inline-block;
   margin-bottom: 8px;
 
   @media (min-width: $tablet-width) {
+    font-size: 14px;
     line-height: 20px;
     margin-bottom: 12px;
   }
+}
+
+.select--modal .select__input-label {
+  color: $text-color-primary;
+  font-size: 14px;
 }
 
 .select__list {
@@ -26,13 +33,17 @@
     display: flex;
   }
 
-  .select__title {
-    border: 1px solid $form-color-dark;
-  }
-
   .select__input-label {
     opacity: 1;
   }
+}
+
+.select--modal[data-state="active"] .select__title {
+  border: 1px solid $form-color-light;
+}
+
+.select--modal[data-state="active"] .select__title {
+  border: 1px solid $form-color-dark;
 }
 
 .select__title {
@@ -41,10 +52,10 @@
   width: 100%;
   display: flex;
   align-items: center;
-  min-height: 44px;
+  min-height: 52px;
   box-sizing: border-box;
   padding: 10px 20px;
-  border: 1px solid rgba(72, 72, 72, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   cursor: pointer;
   position: relative;
@@ -59,7 +70,7 @@
     width: 16px;
     height: 16px;
     transition: all 0.3s ease-out;
-    background-color: #333333;
+    background-color: $form-color-light;
     mask-image: url("/__spritemap#sprite-arrow-down-view");
   }
 
@@ -70,8 +81,20 @@
   }
 }
 
+.select--modal .select__title {
+  min-height: 44px;
+  border: 1px solid rgba(72, 72, 72, 0.3);
+
+  &::after {
+    background-color: $form-color-dark;
+  }
+}
+
 .select:hover .select__title {
-  background-color: $background-color-secondary;
+  border: 1px solid $form-color-light;
+}
+
+.select--modal:hover .select__title {
   border: 1px solid $form-color-dark;
 }
 
@@ -84,20 +107,23 @@
 }
 
 .select:has(.select__title:focus-visible) .select__title {
-  background-color: $background-color-secondary;
-  border: 1px solid $form-color-dark;
+  border: 1px solid $form-color-light;
   outline: none;
+}
+
+.select--modal:has(.select__title:focus-visible) .select__title {
+  border: 1px solid $form-color-dark;
 }
 
 .select__content {
   position: absolute;
-  top: 48px;
+  top: 56px;
   left: 0;
   flex-direction: column;
   width: 100%;
   box-sizing: border-box;
   background-color: $background-color-secondary;
-  border: 1px solid $form-color-dark;
+  border: 1px solid $form-color-light;
   border-radius: 8px;
   transition: all 0.3s ease-out;
   z-index: 5;
@@ -108,9 +134,15 @@
   }
 }
 
+.select--modal .select__content {
+  border: 1px solid $form-color-dark;
+  top: 48px;
+}
+
 .select__label {
   font-size: 14px;
   line-height: 14px;
+  color: $text-color-primary;
   padding: 17px 20px;
   width: 100%;
   box-sizing: border-box;
@@ -142,6 +174,6 @@
 
 .select--error .select__title {
   background-color: rgba(255, 94, 102, 0.2);
-  border: 1px solid $form-collor-error;
+  border: 1px solid $form-color-error;
   opacity: 1;
 }

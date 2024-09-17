@@ -1,0 +1,110 @@
+.checkbox__label {
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(72, 72, 72, 0.9);
+  margin: 0;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: $button-color-primary;
+    border: 1px solid $button-color-primary;
+    border-radius: 2px;
+    top: 50%;
+    margin-top: -9px;
+    left: -30px;
+  }
+
+  &::after {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    mask-image: url("/__spritemap#sprite-check-view");
+    background: $icon-color-light;
+    top: 50%;
+    margin-top: -5px;
+    left: -25px;
+  }
+
+  @media (min-width: $tablet-width) {
+    line-height: 12px;
+    min-height: 20px;
+  }
+
+  &:hover {
+    &::before {
+      background-color: transparent;
+    }
+  }
+}
+
+.checkbox--light .checkbox__label {
+  color: $text-color-secondary;
+
+  &::before {
+    background-color: $button-color-light;
+    border: 1px solid $button-color-light;
+  }
+
+  &::after {
+    background: $icon-color-primary;
+  }
+
+  &:hover {
+    &::before {
+      background-color: transparent;
+    }
+  }
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+  content: "";
+}
+
+.checkbox__input:hover:checked + .checkbox__label::after,
+.checkbox__input:focus:checked + .checkbox__label::after {
+  background-color: $icon-color-primary;
+}
+
+.checkbox--light .checkbox__input:hover:checked + .checkbox__label::after,
+.checkbox--light .checkbox__input:focus:checked + .checkbox__label::after {
+  background-color: $icon-color-light;
+}
+
+.checkbox__input:focus + .checkbox__label::before {
+  background-color: transparent;
+}
+
+.checkbox__input:disabled + .checkbox__label::before {
+  background-color: $disabled-color;
+  border: 1px solid $disabled-color;
+}
+
+.checkbox__input:disabled:checked + .checkbox__label::after {
+  background-color: $icon-color-light;
+  opacity: 0.7;
+}
+
+.checkbox--light .checkbox__input:disabled + .checkbox__label::before {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid $form-color-light;
+}
+
+.checkbox--light .checkbox__input:disabled:checked + .checkbox__label::before {
+  background-color: $disabled-color;
+  border: 1px solid $disabled-color;
+}
+
+.checkbox__input--error + .checkbox__label::before {
+  background-color: rgba(255, 94, 102, 0.2);
+  border: 1px solid $form-color-error;
+  opacity: 1;
+}

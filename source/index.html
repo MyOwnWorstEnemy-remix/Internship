@@ -639,21 +639,22 @@
         <div class="form-section__wrapper">
           <h2 class="form-section__title">Напишите нам</h2>
           <p class="form-section__text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
-          <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="form__input">
-              <span class="form__input-label">Имя</span>
-              <input class="form__text-input" type="text" name="name" id="name" required>
+          <form class="form-section__form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="text-input">
+              <span class="text-input__label">Имя</span>
+              <input class="text-input__input" type="text" name="name" id="name" required pattern="[а-яёА-ЯЁa-zA-Z ]+"
+              title="Имя пользователя должно содержать только буквы и пробелы">
             </label>
-            <label class="form__input">
-              <span class="form__input-label">Телефон</span>
-              <input class="form__text-input" type="tel" name="phone" id="phone" required >
-                <!-- pattern="[^\p{L}]+" title="Телефон не может содержать буквы. Телефон должен начинаться с +7." -->
+            <label class="text-input">
+              <span class="text-input__label">Телефон</span>
+              <input class="text-input__input" type="tel" name="phone" id="phone" required
+                pattern="[+][7][^\p{L}]+" title="Телефон должен начинаться с +7 и не должен содержать буквы">
             </label>
-            <label class="form__input">
-              <span class="form__input-label">Ваше сообщение</span>
-              <textarea class="form__textarea" name="message" id="message" required></textarea>
+            <label class="text-input">
+              <span class="text-input__label">Ваше сообщение</span>
+              <textarea class="text-input__input text-input__input--textarea" name="message" id="message" required></textarea>
             </label>
-            <label class="form__input select"  data-state="">
+            <label class="select"  data-state="">
               <span class="select__input-label">Выберите город</span>
               <div class="select__list">
                 <div class="select__title" data-default="empty" tabindex="0"></div>
@@ -669,11 +670,11 @@
                 </div>
               </div>
             </label>
-            <div>
-              <input class="form__checkbox visually-hidden" type="checkbox" name="consent" id="consent" required>
-              <label class="form__checkbox-label" for="consent">Я согласен на обработку моих персональных данных</label>
+            <div class="checkbox checkbox--light">
+              <input class="checkbox__input visually-hidden" type="checkbox" name="consent" id="consent" required>
+              <label class="checkbox__label" for="consent">Я согласен на обработку моих персональных <br>данных</label>
             </div>
-            <button class="form__button" type="submit">Отправить</button>
+            <button class="form-section__button button button--light" type="submit">Отправить</button>
           </form>
         </div>
       </section>
@@ -763,16 +764,17 @@
         <h2 class="modal__title">Напишите нам</h2>
         <p class="modal__text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
         <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="modal__input">
-            <span class="modal__input-label">Имя</span>
-            <input class="modal__text-input" type="text" name="name" id="name" required>
+          <label class="text-input text-input--modal">
+            <span class="text-input__label">Имя</span>
+            <input class="text-input__input" type="text" name="name" id="name" required pattern="[а-яёА-ЯЁa-zA-Z ]+"
+            title="Имя пользователя должно содержать только буквы и пробелы">
           </label>
-          <label class="modal__input">
-            <span class="modal__input-label">Телефон</span>
-            <input class="modal__text-input" type="tel" name="phone" id="phone" required >
-              <!-- pattern="[^\p{L}]+" title="Телефон не может содержать буквы. Телефон должен начинаться с +7." -->
+          <label class="text-input text-input--modal">
+            <span class="text-input__label">Телефон</span>
+            <input class="text-input__input" type="tel" name="phone" id="phone" required
+              pattern="[+][7][^\p{L}]+" title="Телефон должен начинаться с +7 и не должен содержать буквы">
           </label>
-          <label class="modal__input select"  data-state="">
+          <label class="select select--modal" data-state="">
             <span class="select__input-label">Выберите город</span>
             <div class="select__list">
               <div class="select__title" data-default="empty" tabindex="0"></div>
@@ -788,9 +790,9 @@
               </div>
             </div>
           </label>
-          <div>
-            <input class="modal__checkbox visually-hidden" type="checkbox" name="modal-consent" id="modal-consent" required>
-            <label class="modal__checkbox-label" for="modal-consent">Я согласен на обработку моих персональных данных</label>
+          <div class="checkbox">
+            <input class="checkbox__input visually-hidden" type="checkbox" name="modal-consent" id="modal-consent" required>
+            <label class="checkbox__label" for="modal-consent">Я согласен на обработку моих персональных данных</label>
           </div>
           <button class="modal__form-button button" type="submit">Отправить</button>
         </form>

@@ -1,4 +1,4 @@
-import {checkInput, checkSelect, checkCheckbox} from './util';
+import {nameRules, phoneRules, checkInput, checkSelect, checkCheckbox} from './util';
 
 const modal = document.querySelector('.modal');
 const closeButton = modal.querySelector('.modal__close-button');
@@ -41,23 +41,22 @@ const nameInput = modalForm.querySelector('#name');
 const phoneInput = modalForm.querySelector('#phone');
 const modalSelect = modalForm.querySelector('.select');
 const modalSelectTitle = modalSelect.querySelector('.select__title');
-const checkbox = modalForm.querySelector('.modal__checkbox');
+const checkbox = modalForm.querySelector('.checkbox__input');
 const submitButton = modalForm.querySelector('.modal__form-button');
 
 const onClickCheck = (evt) => {
   evt.preventDefault();
-  const nameRules = /[a-zA-Zа-яёА-ЯЁ ]+/;
-  const phoneRules = /[+][7][^\p{L}]+/gu;
-  const nameCheckResult = checkInput(nameRules, nameInput, 'modal__input--error');
-  const phoneCheckResult = checkInput(phoneRules, phoneInput, 'modal__input--error');
+  const nameCheckResult = checkInput(nameRules, nameInput);
+  const phoneCheckResult = checkInput(phoneRules, phoneInput);
   const selectCheckResult = checkSelect(modalSelectTitle);
-  const checkboxCheckResult = checkCheckbox(checkbox, 'modal__checkbox--error');
+  const checkboxCheckResult = checkCheckbox(checkbox);
+  checkbox.reportValidity();
+  phoneInput.reportValidity();
+  nameInput.reportValidity();
   if(nameCheckResult && phoneCheckResult && selectCheckResult && checkboxCheckResult) {
     modalForm.submit();
-    phoneInput.value = '';
-    nameInput.value = '';
+    modalForm.reset();
     modalSelectTitle.textContent = '';
-    checkbox.checked = false;
   }
 };
 

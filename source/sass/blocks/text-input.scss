@@ -1,0 +1,104 @@
+.text-input__label {
+  font-size: 12px;
+  line-height: 14px;
+  color: $text-color-additional-light;
+  opacity: 0.8;
+  display: block;
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 18px;
+  }
+}
+
+.text-input__input {
+  font-size: 14px;
+  line-height: 14px;
+  width: 100%;
+  min-height: 50px;
+  box-sizing: border-box;
+  padding: 0 25px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  color: $text-color-additional-light;
+  border-radius: 8px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+    min-height: 50px;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid $form-color-light;
+  }
+
+  &:disabled {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+}
+
+.text-input__label:has(~ .text-input__input:focus) {
+  opacity: 1;
+}
+
+.text-input__label:has(~ .text-input__input:disabled) {
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+.text-input:hover .text-input__input {
+  border: 1px solid $form-color-light;
+}
+
+.text-input:hover .text-input__label,
+.text-input--error .text-input__label {
+  opacity: 1;
+}
+
+.text-input--modal .text-input__input {
+  min-height: 44px;
+  border: 1px solid rgba(72, 72, 72, 0.3);
+  color: $text-color-primary;
+}
+
+.text-input__input--textarea {
+  height: 94px;
+  padding: 15px 25px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.text-input--modal:hover .text-input__input,
+.text-input--modal .text-input__input:focus {
+  border: 1px solid $form-color-dark;
+}
+
+.text-input--modal .text-input__label:has(~ .text-input__input:disabled) {
+  opacity: 1;
+  color: $disabled-color;
+}
+
+.text-input--modal .text-input__input:disabled {
+  border: 1px solid rgba(169, 175, 183, 0.5);
+  background-color: rgba(169, 175, 183, 0.2);
+}
+
+.text-input--modal .text-input__label {
+  color: $text-color-primary;
+  font-size: 14px;
+}
+
+.text-input--error .text-input__input {
+  background-color: rgba(255, 94, 102, 0.2);
+  border: 1px solid $form-color-error;
+  opacity: 1;
+}

@@ -44,7 +44,7 @@ for (let i = 0; i < modalSelectLabels.length; i++) {
 }
 
 // Выпадающий список формы
-const form = document.querySelector('.form');
+const form = document.querySelector('.form-section__form');
 const formSelect = form.querySelector('.select');
 const formSelectTitle = formSelect.querySelector('.select__title');
 const formSelectLabels = formSelect.querySelectorAll('.select__label');
