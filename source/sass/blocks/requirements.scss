@@ -1,0 +1,82 @@
+.requirements {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  counter-reset: requirement;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 25px;
+    column-gap: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 23px;
+  }
+}
+
+.requirements__item {
+  margin-left: 15px;
+  padding: 24px 25px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid $text-color-additional-light;
+  border-radius: 16px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: counter(requirement);
+    counter-increment: requirement;
+    color: $text-color-secondary;
+    font-family: $primary-font;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: $background-color-additional;
+    border-radius: 30px;
+    top: -5px;
+    left: -15px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 305px;
+    margin-left: 20px;
+    padding: 30px 25px;
+
+    &::after {
+      font-size: 22px;
+      line-height: 22px;
+      width: 42px;
+      height: 42px;
+      top: -15px;
+      left: -20px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.requirements__text {
+  font-size: 14px;
+  line-height: 20px;
+  color: $text-color-additional-light;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 26px;
+  }
+}
