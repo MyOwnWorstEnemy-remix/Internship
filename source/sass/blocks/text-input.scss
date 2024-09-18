@@ -44,6 +44,21 @@
     background-color: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.4);
   }
+
+  &--textarea {
+    height: 94px;
+    padding: 15px 25px;
+    font-size: 12px;
+    line-height: 20px;
+
+    @media (min-width: $tablet-width) {
+      height: 88px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 90px;
+    }
+  }
 }
 
 .text-input__label:has(~ .text-input__input:focus) {
@@ -68,13 +83,6 @@
   min-height: 44px;
   border: 1px solid rgba(72, 72, 72, 0.3);
   color: $text-color-primary;
-}
-
-.text-input__input--textarea {
-  height: 94px;
-  padding: 15px 25px;
-  font-size: 12px;
-  line-height: 20px;
 }
 
 .text-input--modal:hover .text-input__input,

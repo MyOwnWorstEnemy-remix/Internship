@@ -637,45 +637,47 @@
       </section> -->
       <section class="form-section" data-test="form">
         <div class="form-section__wrapper">
-          <h2 class="form-section__title">Напишите нам</h2>
-          <p class="form-section__text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
-          <form class="form-section__form" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="text-input">
-              <span class="text-input__label">Имя</span>
-              <input class="text-input__input" type="text" name="name" id="name" required pattern="[а-яёА-ЯЁa-zA-Z ]+"
-              title="Имя пользователя должно содержать только буквы и пробелы">
-            </label>
-            <label class="text-input">
-              <span class="text-input__label">Телефон</span>
-              <input class="text-input__input" type="tel" name="phone" id="phone" required
-                pattern="[+][7][^\p{L}]+" title="Телефон должен начинаться с +7 и не должен содержать буквы">
-            </label>
-            <label class="text-input">
-              <span class="text-input__label">Ваше сообщение</span>
-              <textarea class="text-input__input text-input__input--textarea" name="message" id="message" required></textarea>
-            </label>
-            <label class="select"  data-state="">
-              <span class="select__input-label">Выберите город</span>
-              <div class="select__list">
-                <div class="select__title" data-default="empty" tabindex="0"></div>
-                <div class="select__content">
-                  <input class="select__input visually-hidden" type="radio" name="city" id="another" value="another">
-                  <label for="another" class="select__label">Другое</label>
-                  <input class="select__input visually-hidden" type="radio" name="city" id="msc" value="msc">
-                  <label for="msc" class="select__label">Москва</label>
-                  <input class="select__input visually-hidden" type="radio" name="city" id="sbp" value="sbp">
-                  <label for="sbp" class="select__label">Санкт-Петербург</label>
-                  <input class="select__input visually-hidden" type="radio" name="city" id="ekb" value="ekb">
-                  <label for="ekb" class="select__label">Екатеринбург</label>
+          <div class="form-section__content">
+            <h2 class="form-section__title">Напишите нам</h2>
+            <p class="form-section__text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+            <form class="form-section__form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="text-input">
+                <span class="text-input__label">Имя</span>
+                <input class="text-input__input" type="text" name="name" id="name" required pattern="[а-яёА-ЯЁa-zA-Z ]+"
+                title="Имя пользователя должно содержать только буквы и пробелы">
+              </label>
+              <label class="text-input">
+                <span class="text-input__label">Телефон</span>
+                <input class="text-input__input" type="tel" name="phone" id="phone" required
+                  pattern="[+][7][^\p{L}]+" title="Телефон должен начинаться с +7 и не должен содержать буквы">
+              </label>
+              <label class="text-input">
+                <span class="text-input__label">Ваше сообщение</span>
+                <textarea class="text-input__input text-input__input--textarea" name="message" id="message" required></textarea>
+              </label>
+              <label class="select"  data-state="">
+                <span class="select__input-label">Выберите город</span>
+                <div class="select__list">
+                  <div class="select__title" data-default="empty" tabindex="0"></div>
+                  <div class="select__content">
+                    <input class="select__input visually-hidden" type="radio" name="city" id="another" value="another" checked>
+                    <label for="another" class="select__label">Другое</label>
+                    <input class="select__input visually-hidden" type="radio" name="city" id="msc" value="msc">
+                    <label for="msc" class="select__label">Москва</label>
+                    <input class="select__input visually-hidden" type="radio" name="city" id="sbp" value="sbp">
+                    <label for="sbp" class="select__label">Санкт-Петербург</label>
+                    <input class="select__input visually-hidden" type="radio" name="city" id="ekb" value="ekb">
+                    <label for="ekb" class="select__label">Екатеринбург</label>
+                  </div>
                 </div>
+              </label>
+              <div class="checkbox checkbox--light">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="consent" id="consent" required>
+                <label class="checkbox__label" for="consent">Я согласен на обработку моих персональных <br>данных</label>
               </div>
-            </label>
-            <div class="checkbox checkbox--light">
-              <input class="checkbox__input visually-hidden" type="checkbox" name="consent" id="consent" required>
-              <label class="checkbox__label" for="consent">Я согласен на обработку моих персональных <br>данных</label>
-            </div>
-            <button class="form-section__button button button--light" type="submit">Отправить</button>
-          </form>
+              <button class="form-section__button button button--light" type="submit">Отправить</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
@@ -766,12 +768,12 @@
         <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="text-input text-input--modal">
             <span class="text-input__label">Имя</span>
-            <input class="text-input__input" type="text" name="name" id="name" required pattern="[а-яёА-ЯЁa-zA-Z ]+"
+            <input class="text-input__input" type="text" name="modal-name" id="modal-name" required pattern="[а-яёА-ЯЁa-zA-Z ]+"
             title="Имя пользователя должно содержать только буквы и пробелы">
           </label>
           <label class="text-input text-input--modal">
             <span class="text-input__label">Телефон</span>
-            <input class="text-input__input" type="tel" name="phone" id="phone" required
+            <input class="text-input__input" type="tel" name="modal-phone" id="modal-phone" required
               pattern="[+][7][^\p{L}]+" title="Телефон должен начинаться с +7 и не должен содержать буквы">
           </label>
           <label class="select select--modal" data-state="">
@@ -779,14 +781,14 @@
             <div class="select__list">
               <div class="select__title" data-default="empty" tabindex="0"></div>
               <div class="select__content">
-                <input class="select__input visually-hidden" type="radio" name="city" id="another" value="another">
-                <label for="another" class="select__label">Другое</label>
-                <input class="select__input visually-hidden" type="radio" name="city" id="msc" value="msc">
-                <label for="msc" class="select__label">Москва</label>
-                <input class="select__input visually-hidden" type="radio" name="city" id="sbp" value="sbp">
-                <label for="sbp" class="select__label">Санкт-Петербург</label>
-                <input class="select__input visually-hidden" type="radio" name="city" id="ekb" value="ekb">
-                <label for="ekb" class="select__label">Екатеринбург</label>
+                <input class="select__input visually-hidden" type="radio" name="modal-city" id="modal-another" value="another" checked>
+                <label for="modal-another" class="select__label">Другое</label>
+                <input class="select__input visually-hidden" type="radio" name="modal-city" id="modal-msc" value="msc">
+                <label for="modal-msc" class="select__label">Москва</label>
+                <input class="select__input visually-hidden" type="radio" name="modal-city" id="modal-sbp" value="sbp">
+                <label for="modal-sbp" class="select__label">Санкт-Петербург</label>
+                <input class="select__input visually-hidden" type="radio" name="modal-city" id="modal-ekb" value="ekb">
+                <label for="modal-ekb" class="select__label">Екатеринбург</label>
               </div>
             </div>
           </label>

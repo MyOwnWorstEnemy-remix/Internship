@@ -1,10 +1,68 @@
+.form-section {
+  padding: 40px 0;
+}
+
 .form-section__wrapper {
+  width: 100%;
+  padding: 40px 10px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image:
+    image-set(
+      url("../../img/form-background-mobile@1x.webp") type("image/webp") 1x,
+      url("../../img/form-background-mobile@2x.webp") type("image/webp") 2x,
+      url("../../img/form-background-mobile@1x.png") type("image/png") 1x,
+      url("../../img/form-background-mobile@2x.png") type("image/png") 2x
+    );
+
+  @media (min-width: $tablet-width) {
+    width: 652px;
+    padding: 0;
+    border-radius: 16px;
+
+    background-image:
+      image-set(
+        url("../../img/form-background-tablet@1x.webp") type("image/webp") 1x,
+        url("../../img/form-background-tablet@2x.webp") type("image/webp") 2x,
+        url("../../img/form-background-tablet@1x.png") type("image/png") 1x,
+        url("../../img/form-background-tablet@2x.png") type("image/png") 2x
+      );
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1240px;
+
+    background-image:
+      image-set(
+        url("../../img/form-background-desktop@1x.webp") type("image/webp") 1x,
+        url("../../img/form-background-desktop@2x.webp") type("image/webp") 2x,
+        url("../../img/form-background-desktop@1x.png") type("image/png") 1x,
+        url("../../img/form-background-desktop@2x.png") type("image/png") 2x
+      );
+  }
+}
+
+.form-section__content {
   width: 270px;
   margin: 0 auto;
   padding: 15px;
   background-color: $background-color-additional;
   color: $text-color-additional-light;
   border-radius: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 362px;
+    padding: 30px 40px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 350px;
+    padding: 30px 70px;
+  }
 }
 
 .form-section__title {
@@ -14,6 +72,18 @@
   margin: 0;
   margin-bottom: 10px;
   color: $text-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 34px;
+  }
 }
 
 .form-section__text {
@@ -21,6 +91,15 @@
   line-height: 20px;
   margin: 0;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 26px;
+  }
 }
 
 .form-section__form {

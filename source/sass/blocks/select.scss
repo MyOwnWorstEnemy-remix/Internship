@@ -167,13 +167,3 @@
 .select__label:last-of-type {
   border-radius: 0 0 8px 8px;
 }
-
-.select--error .select__input-label {
-  opacity: 1;
-}
-
-.select--error .select__title {
-  background-color: rgba(255, 94, 102, 0.2);
-  border: 1px solid $form-color-error;
-  opacity: 1;
-}

@@ -84,22 +84,21 @@
   }
 
   &:active {
-    opacity: 0.7;
     background-color: $button-color-primary;
-    color: $text-color-secondary;
+    color: rgba(255, 255, 255, 0.7);
 
     &::before {
       background-color: $button-color-light;
     }
 
     &::after {
-      background-color: $icon-color-primary;
+      background-color: rgba(49, 109, 194, 0.7);
       transform: rotate(45deg);
     }
   }
 
   &:disabled {
-    opacity: 1;
+    border: 1px solid $disabled-color;
     background-color: inherit;
     color: $disabled-color;
 
@@ -140,16 +139,15 @@
     }
 
     &:active {
-      opacity: 0.7;
       background-color: $button-color-light;
-      color: $text-color-additional;
+      color: rgba(49, 109, 194, 0.7);
 
       &::before {
         background-color: $button-color-primary;
       }
 
       &::after {
-        background-color: $icon-color-light;
+        background-color: rgba(255, 255, 255, 0.7);
         transform: rotate(45deg);
       }
     }

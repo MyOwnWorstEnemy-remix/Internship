@@ -30,15 +30,6 @@ const checkInput = (rules, input) => {
   return true;
 };
 
-const checkSelect = (select) => {
-  if(select.textContent !== '') {
-    return true;
-  }
-  const selectList = select.parentElement;
-  selectList.parentElement.classList.add('select--error');
-  return false;
-};
-
 const checkCheckbox = (checkbox) => {
   if(checkbox.checked) {
     return true;
@@ -48,4 +39,18 @@ const checkCheckbox = (checkbox) => {
   return false;
 };
 
-export {nameRules, phoneRules, openSelestList, closeSelectList, checkInput, checkSelect, checkCheckbox};
+const checkForm = (form, nameInput, phoneInput, modalSelectTitle, checkbox) => {
+  const nameCheckResult = checkInput(nameRules, nameInput);
+  const phoneCheckResult = checkInput(phoneRules, phoneInput);
+  const checkboxCheckResult = checkCheckbox(checkbox);
+  checkbox.reportValidity();
+  phoneInput.reportValidity();
+  nameInput.reportValidity();
+  if(nameCheckResult && phoneCheckResult && checkboxCheckResult) {
+    form.submit();
+    form.reset();
+    modalSelectTitle.textContent = '';
+  }
+};
+
+export {openSelestList, closeSelectList, checkForm};

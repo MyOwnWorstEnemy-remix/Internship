@@ -1,4 +1,4 @@
-import {nameRules, phoneRules, checkInput, checkSelect, checkCheckbox} from './util';
+import {checkForm} from './util';
 
 const modal = document.querySelector('.modal');
 const closeButton = modal.querySelector('.modal__close-button');
@@ -37,8 +37,8 @@ closeButton.addEventListener('click', closeModal);
 
 // Валидация формы модального окна
 const modalForm = modal.querySelector('.modal__form');
-const nameInput = modalForm.querySelector('#name');
-const phoneInput = modalForm.querySelector('#phone');
+const nameInput = modalForm.querySelector('#modal-name');
+const phoneInput = modalForm.querySelector('#modal-phone');
 const modalSelect = modalForm.querySelector('.select');
 const modalSelectTitle = modalSelect.querySelector('.select__title');
 const checkbox = modalForm.querySelector('.checkbox__input');
@@ -46,30 +46,19 @@ const submitButton = modalForm.querySelector('.modal__form-button');
 
 const onClickCheck = (evt) => {
   evt.preventDefault();
-  const nameCheckResult = checkInput(nameRules, nameInput);
-  const phoneCheckResult = checkInput(phoneRules, phoneInput);
-  const selectCheckResult = checkSelect(modalSelectTitle);
-  const checkboxCheckResult = checkCheckbox(checkbox);
-  checkbox.reportValidity();
-  phoneInput.reportValidity();
-  nameInput.reportValidity();
-  if(nameCheckResult && phoneCheckResult && selectCheckResult && checkboxCheckResult) {
-    modalForm.submit();
-    modalForm.reset();
-    modalSelectTitle.textContent = '';
-  }
+  checkForm(modalForm, nameInput, phoneInput, modalSelectTitle, checkbox);
 };
 
 submitButton.addEventListener('click', onClickCheck);
 
 nameInput.addEventListener('input', () => {
-  nameInput.parentElement.classList.remove('modal__input--error');
+  nameInput.parentElement.classList.remove('text-input--error');
 });
 
 phoneInput.addEventListener('input', () => {
-  phoneInput.parentElement.classList.remove('modal__input--error');
+  phoneInput.parentElement.classList.remove('text-input--error');
 });
 
 checkbox.addEventListener('input', () => {
-  checkbox.classList.remove('modal__checkbox--error');
+  checkbox.classList.remove('checkbox__input--error');
 });

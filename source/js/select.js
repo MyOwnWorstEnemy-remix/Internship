@@ -16,13 +16,11 @@ const onModalSelectTitleClick = () => {
 
 const onModalLabelClick = (evt) => {
   modalSelectTitle.textContent = evt.target.textContent;
-  modalSelect.classList.remove('select--error');
   closeSelectList(modalSelect, modalSelectLabels);
 };
 
 const onModalLabelKeydown = (evt) => {
   if(evt.key === 'Enter') {
-    modalSelect.classList.remove('select--error');
     onModalLabelClick(evt);
   }
 }
