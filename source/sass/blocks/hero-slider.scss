@@ -128,8 +128,7 @@
   @media (min-width: $tablet-width) {
     padding: 14px 20px;
     border-radius: 20px 20px 0 0;
-    bottom: 337px;
-    left: $tablet-padding;
+    top: -40px;
 
     &::after {
       width: 20px;
@@ -139,17 +138,13 @@
       right: -20px;
     }
   }
-
-  @media (min-width: $desktop-width) {
-    left: $desktop-padding;
-    bottom: 367px;
-  }
 }
 
 .hero-slider__bullet {
   display: block;
   height: 8px;
   width: 8px;
+  padding: 0;
   background-color: inherit;
   border: 2px solid $button-color-primary;
   border-radius: 50%;
