@@ -8,7 +8,7 @@ const overlay = document.querySelector('.overlay');
 const openModal = () => {
   modal.classList.remove('visually-hidden');
   overlay.classList.remove('visually-hidden');
-  overlay.classList.add('overlay--modal');
+  overlay.classList.add('overlay');
 
   // Закрытие модального окна при клике на любую часть экрана кроме окна
   document.addEventListener('click', onDocumentClick);
@@ -21,7 +21,7 @@ sliderButtons.forEach((button) => {
 function closeModal () {
   modal.classList.add('visually-hidden');
   overlay.classList.add('visually-hidden');
-  overlay.classList.remove('overlay--modal');
+  overlay.classList.remove('overlay');
 
   document.removeEventListener('click', onDocumentClick);
 }
