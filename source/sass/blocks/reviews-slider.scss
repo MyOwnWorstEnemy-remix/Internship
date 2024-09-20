@@ -1,0 +1,18 @@
+.reviews__slider {
+  overflow: hidden;
+  width: $mobile-actual-width;
+
+  @media (min-width: $tablet-width) {
+    width: 723px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-actual-width;
+  }
+}
+
+.reviews-slider__wrapper {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
