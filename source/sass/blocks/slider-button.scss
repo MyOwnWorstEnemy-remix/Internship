@@ -46,6 +46,7 @@
 
     &::after {
       background-color: $disabled-color;
+      opacity: 1;
     }
   }
 
