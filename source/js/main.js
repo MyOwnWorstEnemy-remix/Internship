@@ -2,6 +2,7 @@ import './menu';
 import './hero-slider';
 import './modal';
 import './programs-slider';
+import './news-navigation';
 import './faq';
 import './reviews-slider';
 import './select';
