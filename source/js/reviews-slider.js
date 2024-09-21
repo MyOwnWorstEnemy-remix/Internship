@@ -35,3 +35,6 @@ new Swiper('.reviews-slider', {
     },
   },
 });
+
+const scrollbarDrag = document.querySelector('.swiper-scrollbar-drag');
+scrollbarDrag.style.background = '#316dc2';

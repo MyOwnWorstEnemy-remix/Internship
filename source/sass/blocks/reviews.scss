@@ -61,13 +61,16 @@
   }
 }
 
-.reviews__scrollbar {
+.reviews__navigation .reviews__scrollbar {
   @media (min-width: $tablet-width) {
     display: block;
     position: relative;
+    left: 0;
+    bottom: 0;
     width: 562px;
     height: 2px;
     background-color: rgba(49, 109, 194, 0.2);
+    cursor: pointer;
   }
 
   @media (min-width: $desktop-width) {
