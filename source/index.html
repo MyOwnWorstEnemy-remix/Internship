@@ -262,7 +262,7 @@
                 <div class="program__text">
                   <h3 class="program__title">Стажировки</h3>
                   <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
-                  <a class="program__link" href="#">
+                  <a class="program__link slider-link" href="#">
                     <span class="visually-hidden">Подробнее</span>
                   </a>
                 </div>
@@ -292,7 +292,7 @@
                 <div class="program__text">
                   <h3 class="program__title">Волонтёрство</h3>
                   <p>Помогайте другим и развивайте свои лидерские качества.</p>
-                  <a class="program__link" href="#">
+                  <a class="program__link slider-link" href="#">
                     <span class="visually-hidden">Подробнее</span>
                   </a>
                 </div>
@@ -322,7 +322,7 @@
                 <div class="program__text">
                   <h3 class="program__title">Учёба</h3>
                   <p>Получите образование и измените своё будущее.</p>
-                  <a class="program__link" href="#">
+                  <a class="program__link slider-link" href="#">
                     <span class="visually-hidden">Подробнее</span>
                   </a>
                 </div>
@@ -352,7 +352,7 @@
                 <div class="program__text">
                   <h3 class="program__title">Религия</h3>
                   <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
-                  <a class="program__link" href="#">
+                  <a class="program__link slider-link" href="#">
                     <span class="visually-hidden">Подробнее</span>
                   </a>
                 </div>
@@ -426,22 +426,22 @@
         <h2 class="news__title title">Новости и материалы</h2>
         <ul class="news__tabs-list">
           <li class="news__tabs-item">
-            <button class="news__tab news__tab--active" type="button">Общее</button>
+            <button class="news__tab news__tab--active" type="button" data-type="all">Общее</button>
           </li>
           <li class="news__tabs-item">
-            <button class="news__tab" type="button">Волонтёрство</button>
+            <button class="news__tab" type="button"  data-type="volunteering">Волонтёрство</button>
           </li>
           <li class="news__tabs-item">
-            <button class="news__tab" type="button">Стажировки</button>
+            <button class="news__tab" type="button" data-type="internship">Стажировки</button>
           </li>
           <li class="news__tabs-item">
-            <button class="news__tab" type="button">Карьера</button>
+            <button class="news__tab" type="button" data-type="career">Карьера</button>
           </li>
           <li class="news__tabs-item">
-            <button class="news__tab" type="button">Путешествия</button>
+            <button class="news__tab" type="button" data-type="travel">Путешествия</button>
           </li>
         </ul>
-        <!-- <div class="news__slider news-slider swiper-container">
+        <div class="news__slider news-slider swiper-container">
           <ul class="news-slider__wrapper swiper-wrapper">
             <li class="news-slider__slide swiper-slide">
               <div class="news-slider__image">
@@ -460,20 +460,24 @@
                     height="330" alt="Фотография участницы программы стажировки." loading="lazy">
                 </picture>
               </div>
-              <span class="news-slider__date">23/03/2023</span>
-              <h3 class="news-slider__title">Интервью с участницей программы стажировки</h3>
-              <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
-              <a class="news-slider__link" href="#">
-                <span class="visually-hidden">Подробнее</span>
-              </a>
+              <div class="news-slider__info">
+                <span class="news-slider__date">23/03/2023</span>
+                <h3 class="news-slider__title">Интервью с участницей программы стажировки</h3>
+                <div class="news-slider__text-wrapper">
+                  <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                  <a class="news-slider__link slider-link" href="#">
+                    <span class="visually-hidden">Подробнее</span>
+                  </a>
+                </div>
+              </div>
             </li>
           </ul>
-        </div>-->
+        </div>
         <div class="news__navigation-wrapper">
           <button class="news__button news__button--prev visually-hidden slider-button slider-button--prev" type="button">
             <span class="visually-hidden">Предыдущий слайд</span>
           </button>
-          <ul class="news__navigation"></ul>
+          <div class="news__pagination"></div>
           <button class="news__button news__button--next visually-hidden slider-button slider-button--next" type="button">
             <span class="visually-hidden">Следующий слайд</span>
           </button>
@@ -879,12 +883,16 @@
               height="330" alt="Фотография участницы программы стажировки." loading="lazy">
           </picture>
         </div>
-        <span class="news-slider__date"></span>
-        <h3 class="news-slider__title"></h3>
-        <p></p>
-        <a class="news-slider__link" href="#">
-          <span class="visually-hidden">Подробнее</span>
-        </a>
+        <div class="news-slider__info">
+          <span class="news-slider__date"></span>
+          <h3 class="news-slider__title"></h3>
+          <div class="news-slider__text-wrapper">
+            <p></p>
+            <a class="news-slider__link slider-link" href="#">
+              <span class="visually-hidden">Подробнее</span>
+            </a>
+          </div>
+        </div>
       </li>
     </template>
 

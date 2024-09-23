@@ -74,7 +74,7 @@ const updateSlider = (pageButtonList, pageIndex, pages) => {
   if (pageIndex > 0 && pageIndex < pages - 1 && pages > shownPages) {
     updateShownButtons(pageButtonList, pageIndex);
   }
-  // renderCards(cardsInfo.slice(currentPage * cardsPerPage, (currentPage + 1) * cardsPerPage));
+  // renderSlides(newsInfo.slice(currentPage * slidesPerPage, (currentPage + 1) * slidesPerPage));
   updateActiveButton(pageButtonList, 'news__page--active', pageIndex);
 };
 

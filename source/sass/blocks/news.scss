@@ -2,6 +2,16 @@
   width: 305px;
   padding: 50px 0 50px $mobile-padding;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-actual-width;
+    padding: 50px $tablet-padding;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-actual-width;
+    padding: 60px $desktop-padding;
+  }
 }
 
 .news__title {
@@ -9,6 +19,15 @@
   margin: 0;
   margin-bottom: 24px;
   margin-right: $mobile-padding;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .news__tabs-list {
@@ -20,11 +39,21 @@
   gap: 10px;
   overflow-x: scroll;
   scrollbar-width: none;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    gap: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: center;
+  }
 }
 
 .news__tab {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   font-size: 12px;
   line-height: 12px;
@@ -40,6 +69,17 @@
   min-height: 36px;
   box-sizing: border-box;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+    min-height: 46px;
+    padding: 5px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 120px;
+  }
 
   &:hover {
     opacity: 1;
@@ -58,17 +98,30 @@
   }
 }
 
+.news__slider {
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
+}
+
 .news__navigation-wrapper {
   width: $mobile-actual-width;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
-.news__navigation {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.news__pagination {
   display: flex;
   width: 152px;
   gap: 16px;

@@ -53,4 +53,48 @@ const checkForm = (form, nameInput, phoneInput, modalSelectTitle, checkbox) => {
   }
 };
 
-export {openSelestList, closeSelectList, checkForm};
+// Создать слайды новостей
+const news = document.querySelector('.news');
+const newsList = news.querySelector('.news-slider__wrapper');
+
+const slideTemplate = document.querySelector('#news-slide-template').content;
+const slideTemplateItem = slideTemplate.querySelector('.news-slider__slide');
+
+const clearSlides = () => {
+  const slideList = newsList.querySelectorAll('.news-slider__slide');
+
+  for (let i = slideList.length - 1; i >= 0; i--) {
+    newsList.removeChild(slideList[i]);
+  }
+};
+
+const renderSlide = (slidesInfo) => {
+  const slideFragment = document.createDocumentFragment();
+
+  slidesInfo.forEach(({imgSrc, imgSrcset, sourceSrcset, imgAlt, title, description, date}) =>  {
+    const slide = slideTemplateItem.cloneNode(true);
+    const sources = slide.querySelectorAll('source');
+    const image = slide.querySelector('img');
+    image.src = imgSrc;
+    image.srcset = imgSrcset;
+    image.alt = imgAlt;
+    sourceSrcset.forEach(({id, type, media, srcset, width, height})=>{
+      sources[id].type = type;
+      sources[id].media = media;
+      sources[id].srcset = srcset;
+      sources[id].width = width;
+      sources[id].height = height;
+    }
+    );
+    slide.querySelector('.news-slider__title').textContent = title;
+    slide.querySelector('p').textContent = description;
+    slide.querySelector('.news-slider__date').textContent = date;
+    slideFragment.appendChild(slide);
+  })
+
+  clearSlides();
+  newsList.appendChild(slideFragment);
+};
+
+
+export {openSelestList, closeSelectList, checkForm, renderSlide};
