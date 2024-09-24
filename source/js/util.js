@@ -1,5 +1,5 @@
-const nameRules = /[a-zA-Zа-яёА-ЯЁ ]+/;
-const phoneRules = /[+][7][^\p{L}]+/gu;
+const nameRules = /[a-zA-Zа-яёА-ЯЁ ]{3,}/;
+const phoneRules = /[+][7][\d \(\)\-]{10,16}/gu;
 
 // Открыть выпадающий список
 const openSelestList = (select, selectLabels) => {

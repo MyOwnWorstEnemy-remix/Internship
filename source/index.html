@@ -783,12 +783,12 @@
               <label class="text-input">
                 <span class="text-input__label">Имя</span>
                 <input class="text-input__input" type="text" name="name" id="name" required pattern="[а-яёА-ЯЁa-zA-Z ]+"
-                title="Имя пользователя должно содержать только буквы и пробелы">
+                title="Имя пользователя должно содержать только буквы и пробелы" minlength="3">
               </label>
               <label class="text-input">
                 <span class="text-input__label">Телефон</span>
                 <input class="text-input__input" type="tel" name="phone" id="phone" required
-                  pattern="[+][7][^\p{L}]+" title="Телефон должен начинаться с +7 и не должен содержать буквы">
+                pattern="[+][7][\d \(\)\-]{10,16}" title="Формат телефона: +7 (000) 000-00-00">
               </label>
               <label class="text-input">
                 <span class="text-input__label">Ваше сообщение</span>
@@ -912,12 +912,12 @@
           <label class="text-input text-input--modal">
             <span class="text-input__label">Имя</span>
             <input class="text-input__input" type="text" name="modal-name" id="modal-name" required pattern="[а-яёА-ЯЁa-zA-Z ]+"
-            title="Имя пользователя должно содержать только буквы и пробелы">
+            title="Имя пользователя должно содержать только буквы и пробелы" minlength="3">
           </label>
           <label class="text-input text-input--modal">
             <span class="text-input__label">Телефон</span>
             <input class="text-input__input" type="tel" name="modal-phone" id="modal-phone" required
-              pattern="[+][7][^\p{L}]+" title="Телефон должен начинаться с +7 и не должен содержать буквы">
+              pattern="[+][7][\d \(\)\-]{10,16}" title="Формат телефона: +7 (000) 000-00-00">
           </label>
           <label class="select select--modal" data-state="">
             <span class="select__input-label">Выберите город</span>

@@ -24,6 +24,12 @@ phoneInput.addEventListener('input', () => {
   phoneInput.parentElement.classList.remove('text-input--error');
 });
 
+phoneInput.addEventListener('focus', () => {
+  if (phoneInput.value === '') {
+    phoneInput.value = '+7';
+  }
+});
+
 checkbox.addEventListener('input', () => {
   checkbox.classList.remove('checkbox__input--error');
 });
