@@ -5,24 +5,6 @@ import {newsInfo} from './data';
 
 renderSlide(newsInfo);
 
-const newsTabList = document.querySelectorAll('.news__tab');
-newsTabList.forEach((tab) => {
-  tab.addEventListener('click', () => {
-    const type = tab.dataset.type;
-    if (type === 'all') {
-      renderSlide(newsInfo);
-    } else {
-      const slidesInfo = newsInfo.filter((info) => info.type === type);
-      renderSlide(slidesInfo);
-    }
-
-    for (let i = 0; i < newsTabList.length; i++) {
-      newsTabList[i].classList.remove('news__tab--active');
-    }
-    tab.classList.add('news__tab--active');
-  });
-});
-
 const newsSlider = new Swiper('.news-slider', {
   modules: [Navigation, Pagination, Grid],
   loop: false,
@@ -30,15 +12,12 @@ const newsSlider = new Swiper('.news-slider', {
     rows: 2,
     fill: 'column',
   },
-  // slidesPerColumn: 2,
-  // slidesPerColumnFill: 'column',
   pagination: {
     el: '.news__pagination',
     type: 'bullets',
     bulletClass: 'news__page',
     bulletActiveClass: 'news__page--active',
     clickable: true,
-    // bulletElement: 'button type="button"',
     renderBullet: function (index, className) {
       return `<button class=${className} type="button">${index+1}</button>`;
     },
@@ -63,10 +42,10 @@ const newsSlider = new Swiper('.news-slider', {
       spaceBetween: 30,
     },
     1440: {
-      slidesPerView: 3,
-      slidesPerGroup: 3,
+      slidesPerView: 1,
       grid: {
         rows: 1,
+        columns: 3,
       },
       spaceBetween: 32,
       simulateTouch: false,
@@ -86,7 +65,9 @@ const showPaginationButton = (button) => {
   button.setAttribute('tab-index', '0');
 };
 
-let paginationList = document.querySelectorAll('.news__page');
+const newsPagination = document.querySelector('.news__pagination');
+// let paginationList = document.querySelectorAll('.news__page');
+let paginationList = newsPagination.children;
 console.log(paginationList);
 const shownButtons = 4;
 let firstShownButton = 0;
@@ -96,10 +77,38 @@ for (let i = shownButtons; i < paginationList.length; i++) {
   hidePaginationButton(paginationList[i]);
 }
 
+const newsTabList = document.querySelectorAll('.news__tab');
+newsTabList.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    const type = tab.dataset.type;
+    if (type === 'all') {
+      renderSlide(newsInfo);
+    } else {
+      const slidesInfo = newsInfo.filter((info) => info.type === type);
+      renderSlide(slidesInfo);
+    }
+
+    console.log(tab);
+    console.log(paginationList);
+    firstShownButton = 0;
+    lastShownButton = paginationList.length < shownButtons ? paginationList.length : shownButtons - 1;
+    newsSlider.slideTo(0);
+
+    for (let i = shownButtons; i < paginationList.length; i++) {
+      hidePaginationButton(paginationList[i]);
+    }
+
+    for (let i = 0; i < newsTabList.length; i++) {
+      newsTabList[i].classList.remove('news__tab--active');
+    }
+    tab.classList.add('news__tab--active');
+  });
+});
+
 const onSlideChange = () => {
   const currentSlideIndex = newsSlider.realIndex;
   console.log(currentSlideIndex + "   " + firstShownButton + "   " + lastShownButton);
-  console.log(paginationList);
+  // console.log(paginationList);
   if (currentSlideIndex === firstShownButton && currentSlideIndex !== 0) {
     firstShownButton -= 1;
     showPaginationButton(paginationList[firstShownButton]);
