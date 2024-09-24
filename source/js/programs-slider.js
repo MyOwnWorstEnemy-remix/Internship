@@ -35,5 +35,6 @@ new Swiper('.programs-slider', {
   },
 });
 
-const scrollbarDrag = document.querySelector('.swiper-scrollbar-drag');
+const programs = document.querySelector('.programs');
+const scrollbarDrag = programs.querySelector('.swiper-scrollbar-drag');
 scrollbarDrag.style.background = '#316dc2';

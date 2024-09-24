@@ -55,16 +55,19 @@
       transform: rotate(45deg);
     }
   }
+}
 
-  // &:disabled {
-  //   &::before {
-  //     background-color: $disabled-color;
-  //   }
+.slider-link[aria-disabled='true'] {
+  pointer-events: none;
+  cursor: auto;
 
-  //   &::after {
-  //     background-color: $icon-color-light;
-  //     opacity: 0.6;
-  //     transform: none;
-  //   }
-  // }
+  &::before {
+    background-color: $disabled-color;
+  }
+
+  &::after {
+    background-color: $icon-color-light;
+    opacity: 0.6;
+    transform: none;
+  }
 }
