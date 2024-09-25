@@ -18,11 +18,11 @@
   &::after {
     position: absolute;
     content: "";
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     top: 50%;
-    margin-top: -5px;
-    right: 28px;
+    margin-top: -4px;
+    right: 29px;
     mask-repeat: no-repeat;
     mask-image: url("/__spritemap#sprite-arrow-view");
     background-color: $icon-color-light;
