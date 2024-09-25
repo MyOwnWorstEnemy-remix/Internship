@@ -21,8 +21,10 @@
 .about__title {
   margin: 0;
   margin-bottom: 15px;
+  margin-left: 1px;
 
   @media (min-width: $tablet-width) {
+    margin-left: 0;
     margin-bottom: 30px;
   }
 }
@@ -117,6 +119,9 @@
 }
 
 .about__button {
+  padding: 6px 57px 5px 21px;
+  justify-content: flex-start;
+
   @media (min-width: $tablet-width) {
     padding-left: 30px;
     padding-right: 81px;
