@@ -1,6 +1,6 @@
 .faq {
   width: $mobile-actual-width;
-  padding: 50px $mobile-padding;
+  padding: 52px $mobile-padding 50px;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
@@ -17,10 +17,14 @@
 .faq__title {
   text-align: center;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 71px;
   }
 }
 
@@ -35,7 +39,7 @@
 
 .faq__question {
   width: 100%;
-  padding: 22px 17px;
+  padding: 20px 15px;
   border: 2px solid $background-color-additional;
   border-radius: 14px;
   box-sizing: border-box;
@@ -43,11 +47,11 @@
 
   @media (min-width: $tablet-width) {
     border-radius: 16px;
-    padding: 32px;
+    padding: 30px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 42px;
+    padding: 40px;
   }
 
   &:hover,
