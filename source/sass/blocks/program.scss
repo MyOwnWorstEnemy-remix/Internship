@@ -78,6 +78,7 @@
   border-radius: 12px 12px 0 0;
   padding: 18px;
   padding-bottom: 6px;
+  width: 110px;
   margin: 0;
   position: relative;
 
@@ -92,6 +93,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    width: fit-content;
     font-size: 20px;
     line-height: 14px;
   }
