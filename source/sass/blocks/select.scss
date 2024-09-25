@@ -11,6 +11,18 @@
     line-height: 20px;
     margin-bottom: 12px;
   }
+
+  &--main-form {
+    margin-bottom: 11px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 12px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 9px;
+    }
+  }
 }
 
 .select--modal .select__input-label {
@@ -73,9 +85,12 @@
   }
 
   @media (min-width: $tablet-width) {
-    min-height: 50px;
     font-size: 16px;
     line-height: 16px;
+
+    &::after {
+      right: 19px;
+    }
   }
 }
 
@@ -85,6 +100,10 @@
 
   &::after {
     background-color: $form-color-dark;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 50px;
   }
 }
 

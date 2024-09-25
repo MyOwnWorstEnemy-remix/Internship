@@ -13,7 +13,7 @@
 
 .form-section__wrapper {
   width: 100%;
-  padding: 40px 10px;
+  padding: 43px 10px 40px;
   margin: 0 auto;
   box-sizing: border-box;
 
@@ -57,20 +57,20 @@
 .form-section__content {
   width: 270px;
   margin: 0 auto;
-  padding: 15px;
+  padding: 15px 15px 27px;
   background-color: $background-color-additional;
   color: $text-color-additional-light;
   border-radius: 16px;
 
   @media (min-width: $tablet-width) {
     width: 362px;
-    padding: 30px 40px;
+    padding: 41px 40px 36px;
     margin: 0;
   }
 
   @media (min-width: $desktop-width) {
     width: 350px;
-    padding: 30px 70px;
+    padding: 44px 70px 40px;
   }
 }
 
@@ -99,7 +99,7 @@
   font-size: 14px;
   line-height: 20px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
@@ -114,9 +114,38 @@
 .form-section__form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 21px;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+  }
 }
 
 .form-section__button {
   justify-content: center;
+  width: 260px;
+  margin-top: -2px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 20px;
+    width: 352px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.form-section__select {
+  width: 260px;
+  margin-top: -7px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -3px;
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -6px;
+  }
 }

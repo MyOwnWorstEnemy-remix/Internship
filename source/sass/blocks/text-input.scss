@@ -15,6 +15,14 @@
   @media (min-width: $desktop-width) {
     line-height: 18px;
   }
+
+  &--main-form {
+    margin-bottom: 11px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 12px;
+    }
+  }
 }
 
 .text-input__input {

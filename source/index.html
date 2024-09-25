@@ -766,21 +766,21 @@
             <p class="form-section__text">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
             <form class="form-section__form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="text-input">
-                <span class="text-input__label">Имя</span>
+                <span class="text-input__label text-input__label--main-form">Имя</span>
                 <input class="text-input__input" type="text" name="name" id="name" required pattern="[а-яёА-ЯЁa-zA-Z ]+"
                 title="Имя пользователя должно содержать только буквы и пробелы" minlength="3">
               </label>
               <label class="text-input">
-                <span class="text-input__label">Телефон</span>
+                <span class="text-input__label text-input__label--main-form">Телефон</span>
                 <input class="text-input__input" type="tel" name="phone" id="phone" required
                 pattern="[+][7][\d \(\)\-]{10,16}" title="Формат телефона: +7 (000) 000-00-00">
               </label>
               <div class="text-input">
-                <label class="text-input__label" for="message">Ваше сообщение</label>
+                <label class="text-input__label text-input__label--main-form" for="message">Ваше сообщение</label>
                 <textarea class="text-input__input text-input__input--textarea" name="message" id="message" required></textarea>
               </div>
-              <div class="select"  data-state="closed">
-                <span class="select__input-label">Выберите город</span>
+              <div class="select form-section__select"  data-state="closed">
+                <span class="select__input-label select__input-label--main-form">Выберите город</span>
                 <div class="select__list">
                   <div class="select__title" data-default="empty" tabindex="0"></div>
                   <div class="select__content">
