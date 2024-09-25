@@ -10,7 +10,7 @@
     justify-content: flex-end;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin-left: auto;
     max-width: 100%;
     gap: 20px;

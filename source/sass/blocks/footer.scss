@@ -50,10 +50,13 @@
 
   @media (min-width: $tablet-width) {
     gap: 15px;
+    width: 528px;
     margin: 0;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
+    width: 729px;
     gap: 30px;
     justify-content: flex-start;
   }
