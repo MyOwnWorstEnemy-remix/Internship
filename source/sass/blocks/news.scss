@@ -1,6 +1,6 @@
 .news {
   width: 305px;
-  padding: 50px 0 50px $mobile-padding;
+  padding: 51px 0 50px $mobile-padding;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
@@ -17,7 +17,7 @@
 .news__title {
   text-align: center;
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 23px;
   margin-right: $mobile-padding;
 
   @media (min-width: $tablet-width) {
@@ -48,6 +48,7 @@
 
   @media (min-width: $desktop-width) {
     justify-content: center;
+    margin-bottom: 40px;
   }
 }
 
@@ -65,7 +66,7 @@
   background-color: transparent;
   border: 2px solid transparent;
   border-radius: 20px;
-  padding: 5px 14px;
+  padding: 6px 14px 5px;
   min-height: 36px;
   box-sizing: border-box;
   cursor: pointer;

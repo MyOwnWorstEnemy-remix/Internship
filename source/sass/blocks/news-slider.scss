@@ -81,6 +81,8 @@
   line-height: 12px;
   letter-spacing: 0.12px;
   color: $text-color-additional;
+  display: block;
+  width: fit-content;
   padding: 12px 12px 6px 0;
   margin: 0;
   border-radius: 0 12px 0 0;
@@ -139,20 +141,23 @@
   @media (min-width: $desktop-width) {
     font-size: 24px;
     line-height: 26px;
-    padding-top: 18px;
+    padding-top: 10px 21px 4px 0;
     width: 172px;
   }
 }
 
 .news-slider__slide:nth-child(3n-2) .news-slider__title {
   @media (min-width: $desktop-width) {
+    padding: 18px 18px 6px 0;
     width: 408px;
+    max-width: fit-content;
   }
 }
 
 .news-slider__text-wrapper {
   display: flex;
   position: relative;
+  min-height: 52px;
 
   &::after {
     position: absolute;
@@ -185,6 +190,14 @@
   }
 }
 
+.news-slider__slide:nth-child(2n) .news-slider__text-wrapper p {
+  padding-top: 13px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 12px;
+  }
+}
+
 .news-slider__slide:nth-child(3n-2) .news-slider__text-wrapper p {
   @media (min-width: $desktop-width) {
     width: 404px;
@@ -196,8 +209,24 @@
   border-radius: 0 12px 0 0;
   background-color: $background-color-primary;
 
+  &::before {
+    right: 10px;
+  }
+
+  &::after {
+    right: 20px;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 17px 18px 20px 0;
+
+    &::before {
+      right: 18px;
+    }
+
+    &::after {
+      right: 28px;
+    }
   }
 
   @media (min-width: $desktop-width) {
