@@ -62,6 +62,8 @@
 }
 
 .reviews__navigation .reviews__scrollbar {
+  height: 0;
+
   @media (min-width: $tablet-width) {
     display: block;
     position: relative;

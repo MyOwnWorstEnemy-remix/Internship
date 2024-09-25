@@ -9,7 +9,7 @@ new Swiper('.programs-slider', {
     prevEl: '.programs__slider-button--prev',
   },
   scrollbar: {
-    el: ".programs__scrollbar",
+    el: '.programs__scrollbar',
     draggable: true,
     dragSize: 326,
   },

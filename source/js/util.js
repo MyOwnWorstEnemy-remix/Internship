@@ -1,5 +1,5 @@
 const nameRules = /[a-zA-Zа-яёА-ЯЁ ]{3,}/;
-const phoneRules = /[+][7][\d \(\)\-]{10,16}/gu;
+const phoneRules = /[+][7][\d ()-]{10,16}/gu;
 
 // Открыть выпадающий список
 const openSelestList = (select, selectLabels) => {
@@ -11,7 +11,7 @@ const openSelestList = (select, selectLabels) => {
 
 // Закрыть выпадающий список
 const closeSelectList = (select, selectLabels) => {
-  select.setAttribute('data-state', '');
+  select.setAttribute('data-state', 'closed');
   selectLabels.forEach((label) => {
     label.setAttribute('tabindex', '-1');
   });
@@ -71,7 +71,7 @@ const clearSlides = () => {
 const renderSlide = (slidesInfo) => {
   const slideFragment = document.createDocumentFragment();
 
-  slidesInfo.forEach(({imgSrc, imgSrcset, sourceSrcset, imgAlt, title, description, date}) =>  {
+  slidesInfo.forEach(({imgSrc, imgSrcset, sourceSrcset, imgAlt, title, description, date}) => {
     const slide = slideTemplateItem.cloneNode(true);
     const sources = slide.querySelectorAll('source');
     const image = slide.querySelector('img');
@@ -90,7 +90,7 @@ const renderSlide = (slidesInfo) => {
     slide.querySelector('p').textContent = description;
     slide.querySelector('.news-slider__date').textContent = date;
     slideFragment.appendChild(slide);
-  })
+  });
 
   clearSlides();
   newsList.appendChild(slideFragment);

@@ -19,7 +19,7 @@ const newsSlider = new Swiper('.news-slider', {
     bulletActiveClass: 'news__page--active',
     clickable: true,
     renderBullet: function (index, className) {
-      return `<button class=${className} type="button">${index+1}</button>`;
+      return `<button class=${className} type="button">${index + 1}</button>`;
     },
   },
   navigation: {
@@ -66,9 +66,7 @@ const showPaginationButton = (button) => {
 };
 
 const newsPagination = document.querySelector('.news__pagination');
-// let paginationList = document.querySelectorAll('.news__page');
-let paginationList = newsPagination.children;
-console.log(paginationList);
+const paginationList = newsPagination.children;
 const shownButtons = 4;
 let firstShownButton = 0;
 let lastShownButton = paginationList.length < shownButtons ? paginationList.length : shownButtons - 1;
@@ -88,8 +86,6 @@ newsTabList.forEach((tab) => {
       renderSlide(slidesInfo);
     }
 
-    console.log(tab);
-    console.log(paginationList);
     firstShownButton = 0;
     lastShownButton = paginationList.length < shownButtons ? paginationList.length : shownButtons - 1;
     newsSlider.slideTo(0);
@@ -107,8 +103,7 @@ newsTabList.forEach((tab) => {
 
 const onSlideChange = () => {
   const currentSlideIndex = newsSlider.realIndex;
-  console.log(currentSlideIndex + "   " + firstShownButton + "   " + lastShownButton);
-  // console.log(paginationList);
+
   if (currentSlideIndex === firstShownButton && currentSlideIndex !== 0) {
     firstShownButton -= 1;
     showPaginationButton(paginationList[firstShownButton]);

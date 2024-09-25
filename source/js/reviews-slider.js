@@ -9,7 +9,7 @@ new Swiper('.reviews-slider', {
     prevEl: '.reviews__button--prev',
   },
   scrollbar: {
-    el: ".reviews__scrollbar",
+    el: '.reviews__scrollbar',
     draggable: true,
     // snapOnRelease: true,
     dragSize: 326,

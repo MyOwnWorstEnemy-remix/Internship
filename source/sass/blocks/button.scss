@@ -112,45 +112,45 @@
       transform: none;
     }
   }
+}
 
-  &--light {
-    color: $text-color-secondary;
-    border: 1px solid $button-color-light;
+.button--light {
+  color: $text-color-secondary;
+  border: 1px solid $button-color-light;
+
+  &::before {
+    background-color: $button-color-light;
+  }
+
+  &::after {
+    background-color: $icon-color-primary;
+  }
+
+  &:hover {
+    background-color: $button-color-light;
+    color: $text-color-additional;
 
     &::before {
-      background-color: $button-color-light;
+      background-color: $button-color-primary;
     }
 
     &::after {
-      background-color: $icon-color-primary;
+      background-color: $icon-color-light;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:active {
+    background-color: $button-color-light;
+    color: rgba(49, 109, 194, 0.7);
+
+    &::before {
+      background-color: $button-color-primary;
     }
 
-    &:hover {
-      background-color: $button-color-light;
-      color: $text-color-additional;
-
-      &::before {
-        background-color: $button-color-primary;
-      }
-
-      &::after {
-        background-color: $icon-color-light;
-        transform: rotate(45deg);
-      }
-    }
-
-    &:active {
-      background-color: $button-color-light;
-      color: rgba(49, 109, 194, 0.7);
-
-      &::before {
-        background-color: $button-color-primary;
-      }
-
-      &::after {
-        background-color: rgba(255, 255, 255, 0.7);
-        transform: rotate(45deg);
-      }
+    &::after {
+      background-color: rgba(255, 255, 255, 0.7);
+      transform: rotate(45deg);
     }
   }
 }

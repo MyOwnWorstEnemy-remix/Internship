@@ -23,10 +23,8 @@
 }
 
 .select[data-state="active"] {
-  .select__title {
-    &::after {
-      transform: rotate(180deg);
-    }
+  .select__title::after {
+    transform: rotate(180deg);
   }
 
   .select__content {
@@ -38,7 +36,7 @@
   }
 }
 
-.select--modal[data-state="active"] .select__title {
+.select[data-state="active"] .select__title {
   border: 1px solid $form-color-light;
 }
 

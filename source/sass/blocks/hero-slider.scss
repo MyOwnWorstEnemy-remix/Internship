@@ -43,20 +43,6 @@
   left: $mobile-padding;
   z-index: 1;
 
-  @media (min-width: $tablet-width) {
-    width: 660px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0;
-    left: $tablet-padding;
-    bottom: 60px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 970px;
-    left: $desktop-padding;
-  }
-
   p {
     font-size: 16px;
     line-height: 20px;
@@ -64,41 +50,55 @@
     width: 239px;
     padding: 0 14px 15px;
     margin: 0;
-    border-radius: 0 0 14px 0;
+    border-radius: 0 0 14px;
     position: relative;
+  }
 
-    &::before {
-      position: absolute;
-      content: "";
-      width: 8px;
-      height: 10px;
-      background-image: radial-gradient(ellipse at right bottom, transparent 70%, $background-color-secondary 70%);
-      top: 0;
-      right: -8px;
-    }
+  p::before {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 10px;
+    background-image: radial-gradient(ellipse at right bottom, transparent 70%, $background-color-secondary 70%);
+    top: 0;
+    right: -8px;
+  }
 
-    &::after {
-      position: absolute;
-      content: "";
-      width: 10px;
-      height: 10px;
-      background-image: radial-gradient(circle at right bottom, transparent 70%, $background-color-secondary 70%);
-      bottom: -10px;
-      right: 73px;
-    }
+  p::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-image: radial-gradient(circle at right bottom, transparent 70%, $background-color-secondary 70%);
+    bottom: -10px;
+    right: 73px;
+  }
 
-    @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
+    width: 660px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    left: $tablet-padding;
+    bottom: 60px;
+
+    p {
       width: 281px;
       border-radius: 0 0 0 30px;
       padding: 0 0 35px 40px;
-
-      &::after,
-      &::before {
-        content: none;
-      }
     }
 
-    @media (min-width: $desktop-width) {
+    p::after,
+    p::before {
+      content: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 970px;
+    left: $desktop-padding;
+
+    p {
       width: 446px;
       padding-left: 50px;
       line-height: 26px;
@@ -216,7 +216,7 @@
   width: 154px;
 
   @media (min-width: $tablet-width) {
-    border-radius: 0 0 30px 0;
+    border-radius: 0 0 30px;
     padding: 0 40px 0 30px;
     width: 198px;
     position: relative;

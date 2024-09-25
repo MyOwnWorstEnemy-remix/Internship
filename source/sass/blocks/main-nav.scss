@@ -78,7 +78,7 @@
       background-color: transparent;
     }
 
-    &:after {
+    &::after {
       background-color: $icon-color-primary;
     }
   }
@@ -92,7 +92,7 @@
       background-color: $active-color;
     }
 
-    &:after {
+    &::after {
       background-color: $icon-color-light;
     }
   }
@@ -106,7 +106,7 @@
       background-color: $disabled-color;
     }
 
-    &:after {
+    &::after {
       background-color: $icon-color-light;
     }
   }
@@ -116,7 +116,7 @@
   mask-image: url("/__spritemap#sprite-menu-view");
 }
 
-.main-nav--opened .main-nav__toggle{
+.main-nav--opened .main-nav__toggle {
   width: 290px;
   background-color: $button-color-primary;
   color: $text-color-secondary;
@@ -143,7 +143,7 @@
       background-color: transparent;
     }
 
-    &:after {
+    &::after {
       background-color: $icon-color-light;
     }
   }
@@ -156,7 +156,7 @@
       background-color: $button-color-light;
     }
 
-    &:after {
+    &::after {
       background-color: $active-color;
     }
   }

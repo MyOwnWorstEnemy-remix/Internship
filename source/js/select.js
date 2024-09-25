@@ -23,13 +23,13 @@ const onModalLabelKeydown = (evt) => {
   if(evt.key === 'Enter') {
     onModalLabelClick(evt);
   }
-}
+};
 
 const onModalSelectTitleKeydown = (evt) => {
   if(evt.key === 'Enter') {
     onModalSelectTitleClick();
   }
-}
+};
 
 // События открытия/закрытия выпадающего списка модального окна
 modalSelectTitle.addEventListener('click', onModalSelectTitleClick);
@@ -64,13 +64,13 @@ const onFormLabelKeydown = (evt) => {
   if(evt.key === 'Enter') {
     onFormLabelClick(evt);
   }
-}
+};
 
 const onFormSelectTitleKeydown = (evt) => {
   if(evt.key === 'Enter') {
     onFormSelectTitleClick();
   }
-}
+};
 
 // События открытия/закрытия выпадающего списка формы
 formSelectTitle.addEventListener('click', onFormSelectTitleClick);

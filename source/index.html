@@ -790,26 +790,26 @@
                 <input class="text-input__input" type="tel" name="phone" id="phone" required
                 pattern="[+][7][\d \(\)\-]{10,16}" title="Формат телефона: +7 (000) 000-00-00">
               </label>
-              <label class="text-input">
-                <span class="text-input__label">Ваше сообщение</span>
+              <div class="text-input">
+                <label class="text-input__label" for="message">Ваше сообщение</label>
                 <textarea class="text-input__input text-input__input--textarea" name="message" id="message" required></textarea>
-              </label>
-              <label class="select"  data-state="">
+              </div>
+              <div class="select"  data-state="closed">
                 <span class="select__input-label">Выберите город</span>
                 <div class="select__list">
                   <div class="select__title" data-default="empty" tabindex="0"></div>
                   <div class="select__content">
                     <input class="select__input visually-hidden" type="radio" name="city" id="undefined" value="undefined" checked>
-                    <label for="undefined" class="select__label visually-hidden">Другое</label>
+                    <label class="select__label visually-hidden" for="undefined">Другое</label>
                     <input class="select__input visually-hidden" type="radio" name="city" id="msc" value="msc">
-                    <label for="msc" class="select__label">Москва</label>
+                    <label class="select__label" for="msc">Москва</label>
                     <input class="select__input visually-hidden" type="radio" name="city" id="sbp" value="sbp">
-                    <label for="sbp" class="select__label">Санкт-Петербург</label>
+                    <label class="select__label" for="sbp">Санкт-Петербург</label>
                     <input class="select__input visually-hidden" type="radio" name="city" id="ekb" value="ekb">
-                    <label for="ekb" class="select__label">Екатеринбург</label>
+                    <label class="select__label" for="ekb">Екатеринбург</label>
                   </div>
                 </div>
-              </label>
+              </div>
               <div class="checkbox checkbox--light">
                 <input class="checkbox__input visually-hidden" type="checkbox" name="consent" id="consent" required>
                 <label class="checkbox__label" for="consent">Я согласен на обработку моих персональных <br>данных</label>
@@ -850,17 +850,17 @@
       </div>
       <ul class="footer__social-list social-list">
         <li class="social-list__item">
-          <a class="social-list__link social-list__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank">
+          <a class="social-list__link social-list__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
             <p class="visually-hidden">Мы в Вконтакте.</p>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link social-list__link--ok" href="https://htmlacademy.ru/" target="_blank">
+          <a class="social-list__link social-list__link--ok" href="https://htmlacademy.ru/" target="_blank" rel="noreferrer noopener">
             <p class="visually-hidden">Мы в Одноклассниках.</p>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link social-list__link--reddit" href="https://htmlacademy.ru/" target="_blank">
+          <a class="social-list__link social-list__link--reddit" href="https://htmlacademy.ru/" target="_blank" rel="noreferrer noopener">
             <p class="visually-hidden">Мы в Reddit.</p>
           </a>
         </li>
@@ -888,10 +888,10 @@
           </picture>
         </div>
         <div class="news-slider__info">
-          <span class="news-slider__date"></span>
-          <h3 class="news-slider__title"></h3>
+          <span class="news-slider__date">23/03/2023</span>
+          <h3 class="news-slider__title">Интервью с участницей программы стажировки</h3>
           <div class="news-slider__text-wrapper">
-            <p></p>
+            <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
             <a class="news-slider__link slider-link" href="#">
               <span class="visually-hidden">Подробнее</span>
             </a>
@@ -919,22 +919,22 @@
             <input class="text-input__input" type="tel" name="modal-phone" id="modal-phone" required
               pattern="[+][7][\d \(\)\-]{10,16}" title="Формат телефона: +7 (000) 000-00-00">
           </label>
-          <label class="select select--modal" data-state="">
+          <div class="select select--modal" data-state="closed">
             <span class="select__input-label">Выберите город</span>
             <div class="select__list">
               <div class="select__title" data-default="empty" tabindex="0"></div>
               <div class="select__content">
-                <input class="select__input visually-hidden" type="radio" name="modal-city" id="modal-another" value="another" checked>
-                <label for="modal-another" class="select__label">Другое</label>
+                <input class="select__input visually-hidden" type="radio" name="modal-city" id="modal-undefined" value="undefined" checked>
+                <label class="select__label visually-hidden" for="modal-undefined">Другое</label>
                 <input class="select__input visually-hidden" type="radio" name="modal-city" id="modal-msc" value="msc">
-                <label for="modal-msc" class="select__label">Москва</label>
+                <label class="select__label" for="modal-msc">Москва</label>
                 <input class="select__input visually-hidden" type="radio" name="modal-city" id="modal-sbp" value="sbp">
-                <label for="modal-sbp" class="select__label">Санкт-Петербург</label>
+                <label class="select__label" for="modal-sbp">Санкт-Петербург</label>
                 <input class="select__input visually-hidden" type="radio" name="modal-city" id="modal-ekb" value="ekb">
-                <label for="modal-ekb" class="select__label">Екатеринбург</label>
+                <label class="select__label" for="modal-ekb">Екатеринбург</label>
               </div>
             </div>
-          </label>
+          </div>
           <div class="checkbox">
             <input class="checkbox__input visually-hidden" type="checkbox" name="modal-consent" id="modal-consent" required>
             <label class="checkbox__label" for="modal-consent">Я согласен на обработку моих персональных данных</label>

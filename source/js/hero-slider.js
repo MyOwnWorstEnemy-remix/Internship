@@ -36,7 +36,7 @@ for(let j = 0; j < slides.length; j++) {
   for(let i = 0; i < slides.length; i++) {
     createBullets(heroPaginations[j], i, j);
   }
-};
+}
 
 // Создаем список обработчиков событий для каждой кнопки
 const eventList = [];

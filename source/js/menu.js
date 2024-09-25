@@ -1,6 +1,5 @@
 const navigation = document.querySelector('.main-nav');
 const toggle = document.querySelector('.main-nav__toggle');
-const links = navigation.querySelectorAll('.nav-list__link');
 const extendedLinks = navigation.querySelectorAll('.nav-list__link--closed');
 const overlay = document.querySelector('.overlay');
 
