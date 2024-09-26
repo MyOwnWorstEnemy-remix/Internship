@@ -7,6 +7,7 @@
   font-weight: 500;
   letter-spacing: 0.24px;
   text-transform: uppercase;
+  text-decoration: none;
   background-color: inherit;
   border-radius: 30px;
   min-height: 44px;
@@ -152,5 +153,23 @@
       background-color: rgba(255, 255, 255, 0.7);
       transform: rotate(45deg);
     }
+  }
+}
+
+.button[aria-disabled="true"] {
+  pointer-events: none;
+  cursor: auto;
+  border: 1px solid $disabled-color;
+  background-color: inherit;
+  color: $disabled-color;
+
+  &::before {
+    background-color: $disabled-color;
+  }
+
+  &::after {
+    background-color: $icon-color-light;
+    opacity: 0.6;
+    transform: none;
   }
 }

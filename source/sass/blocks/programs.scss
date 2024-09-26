@@ -80,6 +80,7 @@
 }
 
 .programs__button {
+  width: fit-content;
   padding: 5px 69px 5px 31px;
 
   @media (min-width: $tablet-width) {

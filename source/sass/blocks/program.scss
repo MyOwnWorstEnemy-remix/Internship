@@ -43,28 +43,40 @@
   @media (min-width: $desktop-width) {
     bottom: 17px;
   }
+}
+
+.program__text-wrapper{
+  width: 188px;
+  padding: 12px 16px 15px 18px;
+  background-color: $background-color-secondary;
+  border-radius: 0 0 0 12px;
+  max-height: 200px;
+  overflow: scroll;
+  scrollbar-width: none;
+
+  @media (min-width: $tablet-width) {
+    width: 202px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 239px;
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+  }
 
   p {
     font-size: 12px;
     line-height: 14px;
-    background-color: $background-color-secondary;
-    width: 188px;
-    padding: 12px 16px 15px 18px;
-    border-radius: 0 0 0 12px;
     margin: 0;
 
     @media (min-width: $tablet-width) {
       font-size: 14px;
       line-height: 20px;
-      width: 202px;
     }
 
     @media (min-width: $desktop-width) {
       line-height: 18px;
-      width: 239px;
-      min-height: 54px;
-      display: flex;
-      align-items: center;
     }
   }
 }

@@ -2,7 +2,7 @@ import {checkForm} from './util';
 
 const modal = document.querySelector('.modal');
 const closeButton = modal.querySelector('.modal__close-button');
-const sliderButtons = document.querySelectorAll('.hero-slider__button');
+const sliderButton = document.querySelector('.about__button');
 const overlay = document.querySelector('.overlay');
 
 const openModal = () => {
@@ -14,9 +14,7 @@ const openModal = () => {
   document.addEventListener('click', onDocumentClick);
 };
 
-sliderButtons.forEach((button) => {
-  button.addEventListener('click', openModal);
-});
+sliderButton.addEventListener('click', openModal);
 
 function closeModal () {
   modal.classList.add('visually-hidden');
@@ -47,6 +45,7 @@ const submitButton = modalForm.querySelector('.modal__form-button');
 const onClickCheck = (evt) => {
   evt.preventDefault();
   checkForm(modalForm, nameInput, phoneInput, modalSelectTitle, checkbox);
+  closeModal();
 };
 
 submitButton.addEventListener('click', onClickCheck);

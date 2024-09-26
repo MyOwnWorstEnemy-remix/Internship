@@ -17,66 +17,68 @@
 
   <body class="page-body">
     <header class="header" data-test="hero">
-      <div class="header__wrapper">
-        <svg class="header__logo" width="52" height="52" role="img" aria-label="Логотип сайта.">
-          <use href="/__spritemap#sprite-logo"></use>
-        </svg>
-        <nav class="header__nav main-nav main-nav--closed">
-          <button class="main-nav__toggle" type="button">Меню</button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list nav-list">
-              <li class="nav-list__item">
-                <a class="nav-list__link" href="#about">О проекте</a>
-              </li>
-              <li class="nav-list__item">
-                <a class="nav-list__link nav-list__link--closed" href="#programs">Программы</a>
-                <ul class="nav-list__sub-list">
-                  <li class="nav-list__sub-item">
-                    <a class="nav-list__link" href="#">Стажировки</a>
-                  </li>
-                  <li class="nav-list__sub-item">
-                    <a class="nav-list__link" href="#">Волонтёрство</a>
-                  </li>
-                  <li class="nav-list__sub-item">
-                    <a class="nav-list__link" href="#">Учёба</a>
-                  </li>
-                  <li class="nav-list__sub-item">
-                    <a class="nav-list__link" href="#">Религия</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-list__item">
-                <a class="nav-list__link" href="#grant">Как поехать</a>
-              </li>
-              <li class="nav-list__item">
-                <a class="nav-list__link" href="#reviews">Отзывы</a>
-              </li>
-              <li class="nav-list__item">
-                <a class="nav-list__link nav-list__link--closed" href="#news">Новости</a>
-                <ul class="nav-list__sub-list">
-                  <li class="nav-list__sub-item">
-                    <a class="nav-list__link" href="#">Общее</a>
-                  </li>
-                  <li class="nav-list__sub-item">
-                    <a class="nav-list__link" href="#">Волонтёрство</a>
-                  </li>
-                  <li class="nav-list__sub-item">
-                    <a class="nav-list__link" href="#">Стажировки</a>
-                  </li>
-                  <li class="nav-list__sub-item">
-                    <a class="nav-list__link" href="#">Карьера</a>
-                  </li>
-                  <li class="nav-list__sub-item">
-                    <a class="nav-list__link" href="#">Путешествия</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-list__item">
-                <a class="nav-list__link" href="#contacts">Контакты</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+      <div class="header__container">
+        <div class="header__wrapper">
+          <svg class="header__logo" width="52" height="52" role="img" aria-label="Логотип сайта.">
+            <use href="/__spritemap#sprite-logo"></use>
+          </svg>
+          <nav class="header__nav main-nav main-nav--closed">
+            <button class="main-nav__toggle" type="button">Меню</button>
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list nav-list">
+                <li class="nav-list__item">
+                  <a class="nav-list__link" href="#about">О проекте</a>
+                </li>
+                <li class="nav-list__item">
+                  <a class="nav-list__link nav-list__link--closed" href="#programs">Программы</a>
+                  <ul class="nav-list__sub-list">
+                    <li class="nav-list__sub-item">
+                      <a class="nav-list__link" href="#">Стажировки</a>
+                    </li>
+                    <li class="nav-list__sub-item">
+                      <a class="nav-list__link" href="#">Волонтёрство</a>
+                    </li>
+                    <li class="nav-list__sub-item">
+                      <a class="nav-list__link" href="#">Учёба</a>
+                    </li>
+                    <li class="nav-list__sub-item">
+                      <a class="nav-list__link" href="#">Религия</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-list__item">
+                  <a class="nav-list__link" href="#grant">Как поехать</a>
+                </li>
+                <li class="nav-list__item">
+                  <a class="nav-list__link" href="#reviews">Отзывы</a>
+                </li>
+                <li class="nav-list__item">
+                  <a class="nav-list__link nav-list__link--closed" href="#news">Новости</a>
+                  <ul class="nav-list__sub-list">
+                    <li class="nav-list__sub-item">
+                      <a class="nav-list__link" href="#">Общее</a>
+                    </li>
+                    <li class="nav-list__sub-item">
+                      <a class="nav-list__link" href="#">Волонтёрство</a>
+                    </li>
+                    <li class="nav-list__sub-item">
+                      <a class="nav-list__link" href="#">Стажировки</a>
+                    </li>
+                    <li class="nav-list__sub-item">
+                      <a class="nav-list__link" href="#">Карьера</a>
+                    </li>
+                    <li class="nav-list__sub-item">
+                      <a class="nav-list__link" href="#">Путешествия</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-list__item">
+                  <a class="nav-list__link" href="#contacts">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
         <div class="overlay visually-hidden"></div>
       </div>
       <section class="hero">
@@ -105,12 +107,14 @@
                     height="568" alt="Девушка с документами." loading="lazy">
                 </picture>
               </div>
-              <div class="hero-slider__info">
-                <div class="hero-slider__pagination"></div>
-                <h2 class="hero-slider__title">Глобальный профессиональный опыт обучения за рубежом</h2>
-                <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!</p>
-                <div class="hero-slider__button-wrapper">
-                  <button class="hero-slider__button button" type="button">Подробнее</button>
+              <div class="hero-slider__container">
+                <div class="hero-slider__info">
+                  <div class="hero-slider__pagination"></div>
+                  <h2 class="hero-slider__title">Глобальный профессиональный опыт обучения за рубежом</h2>
+                  <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!</p>
+                  <div class="hero-slider__button-wrapper">
+                    <button class="hero-slider__button button" type="button">Подробнее</button>
+                  </div>
                 </div>
               </div>
             </li>
@@ -136,12 +140,14 @@
                     height="568" alt="Команда во время рабочего процесса." loading="lazy">
                 </picture>
               </div>
-              <div class="hero-slider__info">
-                <div class="hero-slider__pagination"></div>
-                <h2 class="hero-slider__title">Программы стажировок в крупнейших компаниях мира</h2>
-                <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
-                <div class="hero-slider__button-wrapper">
-                  <button class="hero-slider__button button" type="button">Подробнее</button>
+              <div class="hero-slider__container">
+                <div class="hero-slider__info">
+                  <div class="hero-slider__pagination"></div>
+                  <h2 class="hero-slider__title">Программы стажировок в крупнейших компаниях мира</h2>
+                  <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+                  <div class="hero-slider__button-wrapper">
+                    <button class="hero-slider__button button" type="button">Подробнее</button>
+                  </div>
                 </div>
               </div>
             </li>
@@ -167,12 +173,14 @@
                     height="568" alt="Группа волонтеров." loading="lazy">
                 </picture>
               </div>
-              <div class="hero-slider__info">
-                <div class="hero-slider__pagination"></div>
-                <h2 class="hero-slider__title">Волонтёрские программы — внесите свой вклад в общество</h2>
-                <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
-                <div class="hero-slider__button-wrapper">
-                  <button class="hero-slider__button button" type="button">Подробнее</button>
+              <div class="hero-slider__container">
+                <div class="hero-slider__info">
+                  <div class="hero-slider__pagination"></div>
+                  <h2 class="hero-slider__title">Волонтёрские программы — внесите свой вклад в общество</h2>
+                  <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+                  <div class="hero-slider__button-wrapper">
+                    <button class="hero-slider__button button" type="button">Подробнее</button>
+                  </div>
                 </div>
               </div>
             </li>
@@ -248,7 +256,9 @@
                 </div>
                 <div class="program__text">
                   <h3 class="program__title">Стажировки</h3>
-                  <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+                  <div class="program__text-wrapper">
+                    <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+                  </div>
                   <a class="program__link slider-link" href="#">
                     <span class="visually-hidden">Подробнее</span>
                   </a>
@@ -278,7 +288,9 @@
                 </div>
                 <div class="program__text">
                   <h3 class="program__title">Волонтёрство</h3>
-                  <p>Помогайте другим и развивайте свои лидерские качества.</p>
+                  <div class="program__text-wrapper">
+                    <p>Помогайте другим и развивайте свои лидерские качества.</p>
+                  </div>
                   <a class="program__link slider-link" href="#">
                     <span class="visually-hidden">Подробнее</span>
                   </a>
@@ -308,7 +320,9 @@
                 </div>
                 <div class="program__text">
                   <h3 class="program__title">Учёба</h3>
-                  <p>Получите образование и измените своё будущее.</p>
+                  <div class="program__text-wrapper">
+                    <p>Получите образование и измените своё будущее.</p>
+                  </div>
                   <a class="program__link slider-link" href="#">
                     <span class="visually-hidden">Подробнее</span>
                   </a>
@@ -338,7 +352,9 @@
                 </div>
                 <div class="program__text">
                   <h3 class="program__title">Религия</h3>
-                  <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+                  <div class="program__text-wrapper">
+                    <p>Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+                  </div>
                   <a class="program__link slider-link" href="#">
                     <span class="visually-hidden">Подробнее</span>
                   </a>
@@ -357,7 +373,7 @@
               </button>
             </div>
           </div>
-          <button class="programs__button button" type="button">Все программы</button>
+          <a class="programs__button button" href="#">Все программы</a>
         </div>
       </section>
       <section class="grant" id="grant" data-test="grant">
