@@ -853,38 +853,6 @@
     </footer>
     <script type="module" src="js/main.js"></script>
 
-    <!-- Шаблон слайда новостей -->
-    <template id="news-slide-template">
-      <li class="news-slider__slide swiper-slide">
-        <div class="news-slider__image">
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)"
-              srcset="img/news-desktop-1@1x.webp 1x, img/news-desktop-1@2x.webp 2x" width="604" height="400">
-            <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/news-tablet-1@1x.webp 1x, img/news-tablet-1@2x.webp 2x" width="324" height="350">
-            <source type="image/webp"
-              srcset="img/news-mobile-1@1x.webp 1x, img/news-mobile-1@2x.webp 2x" width="290" height="330">
-            <source type="image/png" media="(min-width: 1440px)"
-              srcset="img/news-desktop-1@1x.png 1x, img/news-desktop-1@2x.png 2x" width="604" height="400">
-            <source type="image/png" media="(min-width: 768px)"
-              srcset="img/news-tablet-1@1x.png 1x, img/news-tablet-1@2x.png 2x" width="324" height="350">
-            <img src="img/news-mobile-1@1x.png" srcset="img/news-mobile-1@2x.png 2x" width="290"
-              height="330" alt="Фотография участницы программы стажировки." loading="lazy">
-          </picture>
-        </div>
-        <div class="news-slider__info">
-          <span class="news-slider__date">23/03/2023</span>
-          <h3 class="news-slider__title">Интервью с участницей программы стажировки</h3>
-          <div class="news-slider__text-wrapper">
-            <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
-            <a class="news-slider__link slider-link" href="#">
-              <span class="visually-hidden">Подробнее</span>
-            </a>
-          </div>
-        </div>
-      </li>
-    </template>
-
     <!-- Модальное окно -->
     <div class="modal visually-hidden">
       <div class="modal__wrapper">

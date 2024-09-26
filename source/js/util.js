@@ -57,8 +57,7 @@ const checkForm = (form, nameInput, phoneInput, modalSelectTitle, checkbox) => {
 const news = document.querySelector('.news');
 const newsList = news.querySelector('.news-slider__wrapper');
 
-const slideTemplate = document.querySelector('#news-slide-template').content;
-const slideTemplateItem = slideTemplate.querySelector('.news-slider__slide');
+const slideTemplateItem = news.querySelector('.news-slider__slide');
 
 const clearSlides = () => {
   const slideList = newsList.querySelectorAll('.news-slider__slide');
