@@ -42,7 +42,8 @@ const createSlider = () => new Swiper('.news-slider', {
       spaceBetween: 30,
     },
     1440: {
-      slidesPerView: 1,
+      slidesPerView: 'auto',
+      slidesPerGroup: 3,
       grid: {
         rows: 1,
         columns: 3,
@@ -72,13 +73,21 @@ const paginationList = newsPagination.children;
 const shownButtons = 4;
 let firstShownButton = 0;
 let lastShownButton = paginationList.length < shownButtons ? paginationList.length : shownButtons - 1;
+const tabletWindowQuery = window.matchMedia('(min-width: 768px)');
+const desktopWindowQuery = window.matchMedia('(min-width: 1440px)');
 
 for (let i = shownButtons; i < paginationList.length; i++) {
   hidePaginationButton(paginationList[i]);
 }
 
 const onSlideChange = () => {
-  const currentSlideIndex = newsSlider.realIndex;
+  let currentSlideIndex = newsSlider.realIndex;
+
+  if(desktopWindowQuery.matches) {
+    currentSlideIndex = Math.ceil(currentSlideIndex / 3);
+  } else if (tabletWindowQuery.matches) {
+    currentSlideIndex = Math.ceil(currentSlideIndex / 2);
+  }
 
   if (currentSlideIndex === firstShownButton && currentSlideIndex !== 0) {
     firstShownButton -= 1;
