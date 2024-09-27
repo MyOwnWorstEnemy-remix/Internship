@@ -87,6 +87,10 @@
   opacity: 1;
 }
 
+.text-input:has(.text-input__input:disabled) {
+  pointer-events: none;
+}
+
 .text-input--modal .text-input__input {
   min-height: 44px;
   border: 1px solid rgba(72, 72, 72, 0.3);

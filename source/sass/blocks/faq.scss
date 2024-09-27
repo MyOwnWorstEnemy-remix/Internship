@@ -61,6 +61,8 @@
   }
 
   &:active {
+    background-color: $background-color-secondary;
+
     h3 {
       color: $active-color;
     }
@@ -215,4 +217,18 @@
   &::after {
     background-color: $active-color;
   }
+}
+
+.faq__button:disabled {
+  background-color: $disabled-color;
+  border: $disabled-color;
+
+  &::after {
+    background-color: $icon-color-light;
+    opacity: 0.6;
+  }
+}
+
+.faq__question:has(.faq__button:disabled) {
+  pointer-events: none;
 }

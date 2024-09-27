@@ -99,6 +99,7 @@
   }
 
   &:disabled {
+    cursor: auto;
     border: 1px solid $disabled-color;
     background-color: inherit;
     color: $disabled-color;
@@ -153,6 +154,10 @@
       background-color: rgba(255, 255, 255, 0.7);
       transform: rotate(45deg);
     }
+  }
+
+  &:disabled {
+    pointer-events: none;
   }
 }
 

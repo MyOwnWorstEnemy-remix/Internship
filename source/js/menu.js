@@ -1,5 +1,6 @@
 const navigation = document.querySelector('.main-nav');
 const toggle = document.querySelector('.main-nav__toggle');
+const links = document.querySelectorAll('.nav-list__link');
 const extendedLinks = navigation.querySelectorAll('.nav-list__link--closed');
 const overlay = document.querySelector('.overlay');
 
@@ -36,6 +37,14 @@ function onDocumentClick (clickEvt) {
 
 // Открытие/закрытие меню при клике на кнопку меню
 toggle.addEventListener('click', onToggleClick);
+
+links.forEach((link) => {
+  if (!link.classList.contains('nav-list__link--opened') && !link.classList.contains('nav-list__link--closed')) {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  }
+});
 
 // Открытие,закрытие выпадающего списка после клика на ссылку
 extendedLinks.forEach((link) => {

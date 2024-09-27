@@ -33,15 +33,9 @@
     background-color: $icon-color-light;
   }
 
-  &:hover {
-    opacity: 1;
-  }
-
+  &:hover,
   &:focus {
-    outline: none;
     opacity: 1;
-    color: $text-color-primary;
-    border-bottom: 1px solid $text-color-primary;
   }
 
   &:active {
