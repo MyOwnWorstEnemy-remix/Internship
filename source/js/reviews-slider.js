@@ -11,7 +11,6 @@ new Swiper('.reviews-slider', {
   scrollbar: {
     el: '.reviews__scrollbar',
     draggable: true,
-    // snapOnRelease: true,
     dragSize: 326,
   },
 

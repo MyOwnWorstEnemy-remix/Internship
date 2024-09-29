@@ -194,7 +194,8 @@
   }
 
   &--active {
-    background-color: $button-color-primary;
+    background-color: $active-color;
+    border: 2px solid $active-color;
   }
 }
 

@@ -1,6 +1,7 @@
 .modal {
   display: block;
-  position: absolute;
+  position: fixed;
+  z-index: 2;
   top: 23px;
   left: 0;
   width: 100vw;

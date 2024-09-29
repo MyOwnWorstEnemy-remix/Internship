@@ -80,6 +80,21 @@ for (let i = shownButtons; i < paginationList.length; i++) {
   hidePaginationButton(paginationList[i]);
 }
 
+const changeShownButtons = (index) => {
+  if (index === firstShownButton && index !== 0) {
+    firstShownButton -= 1;
+    showPaginationButton(paginationList[firstShownButton]);
+    hidePaginationButton(paginationList[lastShownButton]);
+    lastShownButton -= 1;
+  }
+  if (index === lastShownButton && index !== paginationList.length - 1) {
+    hidePaginationButton(paginationList[firstShownButton]);
+    firstShownButton += 1;
+    lastShownButton += 1;
+    showPaginationButton(paginationList[lastShownButton]);
+  }
+};
+
 const onSlideChange = () => {
   let currentSlideIndex = newsSlider.realIndex;
 
@@ -89,21 +104,26 @@ const onSlideChange = () => {
     currentSlideIndex = Math.ceil(currentSlideIndex / 2);
   }
 
-  if (currentSlideIndex === firstShownButton && currentSlideIndex !== 0) {
-    firstShownButton -= 1;
-    showPaginationButton(paginationList[firstShownButton]);
-    hidePaginationButton(paginationList[lastShownButton]);
-    lastShownButton -= 1;
-  }
-  if (currentSlideIndex === lastShownButton && currentSlideIndex !== paginationList.length - 1) {
-    hidePaginationButton(paginationList[firstShownButton]);
-    firstShownButton += 1;
-    lastShownButton += 1;
-    showPaginationButton(paginationList[lastShownButton]);
-  }
+  changeShownButtons(currentSlideIndex);
 };
 
 newsSlider.on('slideChange', onSlideChange);
+
+for (let i = 0; i < paginationList.length; i++) {
+  paginationList[i].addEventListener('focus', () => {
+    changeShownButtons(i);
+  });
+  // paginationList[i].addEventListener('click', () => {
+  //   console.log('click');
+  //   let nextSlideIndex = i
+  //   if(desktopWindowQuery.matches) {
+  //     nextSlideIndex *= 3;
+  //   } else if (tabletWindowQuery.matches) {
+  //     nextSlideIndex *= 2;
+  //   }
+  //   newsSlider.slideTo(nextSlideIndex);
+  // });
+}
 
 const newsTabList = document.querySelectorAll('.news__tab');
 newsTabList.forEach((tab) => {
@@ -125,6 +145,21 @@ newsTabList.forEach((tab) => {
 
     for (let i = shownButtons; i < paginationList.length; i++) {
       hidePaginationButton(paginationList[i]);
+    }
+
+    for (let i = 0; i < paginationList.length; i++) {
+      paginationList[i].addEventListener('focus', () => {
+        changeShownButtons(i);
+      });
+      // paginationList[i].addEventListener('click', () => {
+      //   let nextSlideIndex = i
+      //   if(desktopWindowQuery.matches) {
+      //     nextSlideIndex *= 3;
+      //   } else if (tabletWindowQuery.matches) {
+      //     nextSlideIndex *= 2;
+      //   }
+      //   newsSlider.slideTo(nextSlideIndex);
+      // });
     }
 
     for (let i = 0; i < newsTabList.length; i++) {

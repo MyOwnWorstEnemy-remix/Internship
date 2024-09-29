@@ -48,12 +48,13 @@
 .nav-list__link--opened::after {
   content: "";
   mask-image: url("/__spritemap#sprite-arrow-down-view");
+  transform: rotate(180deg);
 }
 
 .nav-list__link--closed::after {
   content: "";
   mask-image: url("/__spritemap#sprite-arrow-down-view");
-  transform: rotate(180deg);
+  transform: none;
 }
 
 .nav-list__sub-list {

@@ -1,6 +1,7 @@
 import {checkForm} from './util';
 
 const modal = document.querySelector('.modal');
+const modalWrapper = modal.querySelector('.modal__wrapper');
 const closeButton = modal.querySelector('.modal__close-button');
 const sliderButton = document.querySelector('.about__button');
 const overlay = document.querySelector('.overlay');
@@ -25,7 +26,7 @@ function closeModal () {
 }
 
 function onDocumentClick (clickEvt) {
-  if (clickEvt.composedPath().includes(overlay)) {
+  if (clickEvt.composedPath().includes(overlay) || (clickEvt.composedPath().includes(modal) && !clickEvt.composedPath().includes(modalWrapper))) {
     closeModal();
   }
 }

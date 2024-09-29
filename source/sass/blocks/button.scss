@@ -79,6 +79,8 @@
   }
 
   &:focus {
+    outline: none;
+
     &::after {
       transform: rotate(45deg);
     }

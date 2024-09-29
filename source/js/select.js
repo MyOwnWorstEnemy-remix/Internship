@@ -41,6 +41,13 @@ for (let i = 0; i < modalSelectLabels.length; i++) {
   modalSelectLabels[i].addEventListener('keydown', onModalLabelKeydown);
 }
 
+// Закрытие выпадающего списка модального окна при клике на произвольную область вне списка
+document.addEventListener('click', (evt) => {
+  if (!evt.composedPath().includes(modalSelect)) {
+    closeSelectList(modalSelect, modalSelectLabels);
+  }
+});
+
 // Выпадающий список формы
 const form = document.querySelector('.form-section__form');
 const formSelect = form.querySelector('.select');
@@ -81,3 +88,10 @@ for (let i = 0; i < formSelectLabels.length; i++) {
   formSelectLabels[i].addEventListener('click', onFormLabelClick);
   formSelectLabels[i].addEventListener('keydown', onFormLabelKeydown);
 }
+
+// Закрытие выпадающего списка формы при клике на произвольную область вне списка
+document.addEventListener('click', (evt) => {
+  if (!evt.composedPath().includes(formSelect)) {
+    closeSelectList(formSelect, formSelectLabels);
+  }
+});
