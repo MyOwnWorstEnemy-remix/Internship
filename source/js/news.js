@@ -113,16 +113,15 @@ for (let i = 0; i < paginationList.length; i++) {
   paginationList[i].addEventListener('focus', () => {
     changeShownButtons(i);
   });
-  // paginationList[i].addEventListener('click', () => {
-  //   console.log('click');
-  //   let nextSlideIndex = i
-  //   if(desktopWindowQuery.matches) {
-  //     nextSlideIndex *= 3;
-  //   } else if (tabletWindowQuery.matches) {
-  //     nextSlideIndex *= 2;
-  //   }
-  //   newsSlider.slideTo(nextSlideIndex);
-  // });
+  paginationList[i].addEventListener('mousedown', () => {
+    let nextSlideIndex = i;
+    if(desktopWindowQuery.matches) {
+      nextSlideIndex *= 3;
+    } else if (tabletWindowQuery.matches) {
+      nextSlideIndex *= 2;
+    }
+    newsSlider.slideTo(nextSlideIndex);
+  });
 }
 
 const newsTabList = document.querySelectorAll('.news__tab');
@@ -151,15 +150,15 @@ newsTabList.forEach((tab) => {
       paginationList[i].addEventListener('focus', () => {
         changeShownButtons(i);
       });
-      // paginationList[i].addEventListener('click', () => {
-      //   let nextSlideIndex = i
-      //   if(desktopWindowQuery.matches) {
-      //     nextSlideIndex *= 3;
-      //   } else if (tabletWindowQuery.matches) {
-      //     nextSlideIndex *= 2;
-      //   }
-      //   newsSlider.slideTo(nextSlideIndex);
-      // });
+      paginationList[i].addEventListener('mousedown', () => {
+        let nextSlideIndex = i;
+        if(desktopWindowQuery.matches) {
+          nextSlideIndex *= 3;
+        } else if (tabletWindowQuery.matches) {
+          nextSlideIndex *= 2;
+        }
+        newsSlider.slideTo(nextSlideIndex);
+      });
     }
 
     for (let i = 0; i < newsTabList.length; i++) {
