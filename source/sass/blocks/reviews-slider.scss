@@ -3,7 +3,7 @@
   width: $mobile-actual-width;
 
   @media (min-width: $tablet-width) {
-    width: 723px;
+    width: $tablet-actual-width;
   }
 
   @media (min-width: $desktop-width) {

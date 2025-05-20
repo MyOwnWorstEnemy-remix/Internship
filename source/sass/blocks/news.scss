@@ -1,6 +1,6 @@
 .news {
-  width: 305px;
-  padding: 51px 0 50px $mobile-padding;
+  width: $mobile-actual-width;
+  padding: 51px $mobile-padding 50px;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
@@ -36,9 +36,9 @@
   margin-bottom: 24px;
   list-style: none;
   display: flex;
-  gap: 10px;
-  overflow-x: scroll;
-  scrollbar-width: none;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  justify-content: center;
 
   @media (min-width: $tablet-width) {
     margin: 0 auto;

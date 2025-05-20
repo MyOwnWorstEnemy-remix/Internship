@@ -6,8 +6,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 50px $tablet-padding;
-    padding-right: 0;
-    width: 723px;
+    width: $tablet-actual-width;
   }
 
   @media (min-width: $desktop-width) {

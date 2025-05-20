@@ -20,7 +20,7 @@ new Swiper('.reviews-slider', {
       spaceBetween: 30,
     },
     768: {
-      slidesPerView: 'auto',
+      slidesPerView: 1,
       spaceBetween: 30,
     },
     1440: {

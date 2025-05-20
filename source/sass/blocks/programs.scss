@@ -5,8 +5,8 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    padding: 53px 0 50px $tablet-padding;
-    width: 723px;
+    padding: 53px $tablet-padding 50px;
+    width: $tablet-actual-width;
   }
 
   @media (min-width: $desktop-width) {
