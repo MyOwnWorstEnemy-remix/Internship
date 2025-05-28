@@ -67,6 +67,10 @@ const clearSlides = () => {
   }
 };
 
+function getImageUrl(name) {
+  return new URL(`img/${name}`, import.meta.url).href
+}
+
 const renderSlide = (slidesInfo) => {
   const slideFragment = document.createDocumentFragment();
 
@@ -74,13 +78,13 @@ const renderSlide = (slidesInfo) => {
     const slide = slideTemplateItem.cloneNode(true);
     const sources = slide.querySelectorAll('source');
     const image = slide.querySelector('img');
-    image.src = imgSrc;
-    image.srcset = imgSrcset;
+    image.src = getImageUrl(imgSrc);
+    image.srcset = `${getImageUrl(imgSrcset)} 2x`;
     image.alt = imgAlt;
-    sourceSrcset.forEach(({id, type, media, srcset, width, height})=>{
+    sourceSrcset.forEach(({id, type, media, src, srcset, width, height})=>{
       sources[id].type = type;
       sources[id].media = media;
-      sources[id].srcset = srcset;
+      sources[id].srcset = `${getImageUrl(src)} 1x, ${getImageUrl(srcset)} 2x`;
       sources[id].width = width;
       sources[id].height = height;
     }
