@@ -68,7 +68,7 @@ const clearSlides = () => {
 };
 
 function getImageUrl(name) {
-  return new URL(`./img/${name}`, import.meta.url).href
+  return new URL(`/img/${name}`, import.meta.url).href
 }
 
 const renderSlide = (slidesInfo) => {
